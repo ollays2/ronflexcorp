@@ -381,8 +381,18 @@ function renderCatalog(){
   }
 
   const pag = document.getElementById('pagination');
-  pag.innerHTML = Array.from({length:totalPages}).map((_,i)=>
-    `<button class="page-btn ${state.page===i+1?'active':''}" data-page="${i+1}">${i+1}</button>`
+  const clamp = (p) => Math.min(Math.max(p,1), totalPages);
+  const jumps = [
+    { label: '&laquo;&laquo;&laquo; -10', target: clamp(state.page-10), disabled: state.page<=1 },
+    { label: '&laquo; -1', target: clamp(state.page-1), disabled: state.page<=1 },
+    { label: `Page ${state.page} / ${totalPages}`, target: state.page, current: true },
+    { label: '+1 &raquo;', target: clamp(state.page+1), disabled: state.page>=totalPages },
+    { label: '+10 &raquo;&raquo;&raquo;', target: clamp(state.page+10), disabled: state.page>=totalPages },
+  ];
+  pag.innerHTML = jumps.map(j =>
+    j.current
+      ? `<span class="page-current">${j.label}</span>`
+      : `<button class="page-btn page-jump" data-page="${j.target}" ${j.disabled?'disabled':''}>${j.label}</button>`
   ).join('');
   pag.querySelectorAll('.page-btn').forEach(b=>b.addEventListener('click', ()=>{
     state.page = parseInt(b.dataset.page,10);
