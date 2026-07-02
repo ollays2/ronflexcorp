@@ -22,7 +22,7 @@
 <nav class="nav" id="nav">
   <div class="container nav-inner">
     <a href="#accueil" class="brand">
-      <img class="brand-mark" src="assets/logo.svg" alt="Logo RonflexCorp" width="46" height="46">
+      <img class="brand-mark" src="assets/Snorlax_600_3331126.jpg" alt="Logo RonflexCorp" width="46" height="46" style="border-radius:50%;object-fit:cover;">
       <span class="brand-text"><b>RonflexCorp</b><span>Dormir · Combattre · Commercer</span></span>
     </a>
     <div class="nav-links">
@@ -100,8 +100,8 @@
       <h3 style="font-size:26px;margin-bottom:6px;">Notre galerie</h3>
     </div>
     <div class="gallery reveal reveal-stagger">
-      <div class="gallery-item" style="--i:0"><img src="assets/gallery-1.svg" alt="Illustration décorative — prairie et ciel"></div>
-      <div class="gallery-item" style="--i:1"><img src="assets/gallery-2.svg" alt="Illustration décorative — montagnes"></div>
+      <div class="gallery-item" style="--i:0"><img src="assets/snorlax-foret.jpg" alt="Ronflex endormi dans une clairière fleurie"></div>
+      <div class="gallery-item" style="--i:1"><img src="assets/snorlax-cafe.jpg" alt="Ronflex et ses compagnons endormis dans la prairie"></div>
       <div class="gallery-item" style="--i:2"><img src="assets/gallery-3.svg" alt="Illustration décorative — clairière"></div>
       <div class="gallery-item" style="--i:3"><img src="assets/gallery-4.svg" alt="Illustration décorative — colline au crépuscule"></div>
     </div>
@@ -153,13 +153,13 @@
           <p class="form-sub">Complétez le formulaire ci-dessous, un Titan vous répondra sous 48h.</p>
           <form id="recruitForm">
             <div class="form-row">
-              <div class="field"><label>Pseudo Minecraft</label><input type="text" placeholder="ex. RonfleurDu42" required></div>
-              <div class="field"><label>Pseudo Discord</label><input type="text" placeholder="ex. dresseur#0000" required></div>
+              <div class="field"><label>Pseudo Minecraft</label><input type="text" name="pseudo_minecraft" placeholder="ex. RonfleurDu42" required></div>
+              <div class="field"><label>Pseudo Discord</label><input type="text" name="pseudo_discord" placeholder="ex. dresseur#0000" required></div>
             </div>
             <div class="form-row">
-              <div class="field"><label>Âge</label><input type="number" min="13" placeholder="ex. 17" required></div>
+              <div class="field"><label>Âge</label><input type="number" name="age" min="13" placeholder="ex. 17" required></div>
               <div class="field"><label>Temps de jeu / semaine</label>
-                <select>
+                <select name="temps_jeu">
                   <option>Moins de 3h</option>
                   <option>3 à 8h</option>
                   <option>8 à 15h</option>
@@ -169,7 +169,7 @@
             </div>
             <div class="field full" style="margin-bottom:16px;">
               <label>Expérience sur Cobblemon</label>
-              <select>
+              <select name="experience">
                 <option>Débutant</option>
                 <option>Intermédiaire</option>
                 <option>Confirmé</option>
@@ -178,7 +178,7 @@
             </div>
             <div class="field full" style="margin-bottom:16px;">
               <label>Motivations</label>
-              <textarea placeholder="Pourquoi voulez-vous rejoindre RonflexCorp ?" required></textarea>
+              <textarea name="motivations" placeholder="Pourquoi voulez-vous rejoindre RonflexCorp ?" required></textarea>
             </div>
             <button type="submit" class="btn submit-btn">Envoyer ma candidature <span class="arrow">→</span></button>
           </form>
@@ -264,12 +264,12 @@
         <p class="form-sub">Pour toute question hors recrutement.</p>
         <form id="contactForm">
           <div class="form-row">
-            <div class="field"><label>Nom</label><input type="text" required></div>
-            <div class="field"><label>Email ou Discord</label><input type="text" required></div>
+            <div class="field"><label>Nom</label><input type="text" name="nom" required></div>
+            <div class="field"><label>Email ou Discord</label><input type="text" name="contact" required></div>
           </div>
           <div class="field full" style="margin-bottom:16px;">
             <label>Message</label>
-            <textarea required placeholder="Votre message…"></textarea>
+            <textarea name="message" required placeholder="Votre message…"></textarea>
           </div>
           <button type="submit" class="btn submit-btn" style="background:var(--deep-blue);">Envoyer <span class="arrow">→</span></button>
         </form>
@@ -288,7 +288,7 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="assets/logo-footer.svg" alt="Logo RonflexCorp" width="38" height="38">
+        <img src="assets/Snorlax_600_3331126.jpg" alt="Logo RonflexCorp" width="38" height="38" style="border-radius:50%;object-fit:cover;">
         <b>RonflexCorp</b>
       </div>
       <div class="footer-links">
