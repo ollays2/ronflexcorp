@@ -1,7 +1,5 @@
 [
   { "label": "Membres", "value": 6 },
   { "label": "Pokémon dispo.", "value": 0 },
-  { "label": "Pokémon vendus", "value": 0 },
-  { "label": "Transactions", "value": 0 },
-  { "label": "Niveau moyen", "value": 0 }
+  { "label": "Pokémon vendus", "value": 0 }
 ]
