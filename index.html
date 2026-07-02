@@ -60,13 +60,7 @@
     </div>
   </div>
   <div class="container stats-wrap">
-    <div class="stats-grid">
-      <div class="stat reveal"><b data-count="482">0</b><span>Membres</span></div>
-      <div class="stat reveal"><b data-count="1260">0</b><span>Pokémon dispo.</span></div>
-      <div class="stat reveal"><b data-count="3894">0</b><span>Pokémon vendus</span></div>
-      <div class="stat reveal"><b data-count="9021">0</b><span>Transactions</span></div>
-      <div class="stat reveal"><b data-count="47">0</b><span>Niveau moyen</span></div>
-    </div>
+    <div class="stats-grid reveal reveal-stagger" id="statsGrid"></div>
   </div>
 </header>
 <svg class="belly-divider" viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0 0 C300 90 1140 90 1440 0 L1440 110 L0 110 Z" fill="#F2E8D5"/></svg>
@@ -87,12 +81,7 @@
         </div>
       </div>
       <div class="reveal">
-        <div class="grades">
-          <div class="grade-card"><div class="grade-rank">Rang I</div><h4>Ronfleur</h4><p>Nouveau dresseur accueilli dans la guilde et sa pension.</p></div>
-          <div class="grade-card"><div class="grade-rank">Rang II</div><h4>Gardien</h4><p>Membre actif, contribue aux échanges et à l'entraide.</p></div>
-          <div class="grade-card"><div class="grade-rank">Rang III</div><h4>Sentinelle</h4><p>Encadre les nouveaux et veille sur le territoire.</p></div>
-          <div class="grade-card"><div class="grade-rank">Rang IV</div><h4>Titan</h4><p>Pilier de la guilde, référence en élevage et combat.</p></div>
-        </div>
+        <div class="grades reveal reveal-stagger" id="gradesGrid"></div>
       </div>
     </div>
     <div class="reveal">
@@ -253,11 +242,7 @@
           <p>Toute la vie de la guilde s'y passe : recrutement, échanges, événements et support.</p>
           <a href="#" class="btn btn-discord">💬 Rejoindre le Discord</a>
         </div>
-        <div class="responsables">
-          <div class="responsable"><div class="resp-avatar">GM</div><span>Aldric<br><small>Fondateur</small></span></div>
-          <div class="responsable"><div class="resp-avatar">CO</div><span>Sylwen<br><small>Co-fondatrice</small></span></div>
-          <div class="responsable"><div class="resp-avatar">PN</div><span>Bramo<br><small>Responsable Pension</small></span></div>
-        </div>
+        <div class="responsables" id="teamList"></div>
       </div>
       <div class="form-card reveal">
         <h3>Formulaire de contact</h3>
