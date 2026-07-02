@@ -34,10 +34,24 @@ const nav = document.getElementById('nav');
 window.addEventListener('scroll', ()=>{
   nav.classList.toggle('scrolled', window.scrollY > 40);
 });
-document.getElementById('burger').addEventListener('click', ()=>{
+document.getElementById('burger').addEventListener('click', (e)=>{
+  e.stopPropagation();
   const links = document.querySelector('.nav-links');
-  links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
-  links.style.cssText += 'position:fixed;top:74px;left:20px;right:20px;background:#FBF8F2;flex-direction:column;padding:18px;border-radius:20px;box-shadow:0 20px 40px -20px rgba(0,0,0,.3);z-index:200;';
+  const isOpen = links.classList.toggle('mobile-open');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click', ()=>{
+    document.querySelector('.nav-links').classList.remove('mobile-open');
+    document.body.style.overflow = '';
+  });
+});
+document.addEventListener('click', (e)=>{
+  const links = document.querySelector('.nav-links');
+  if(links.classList.contains('mobile-open') && !links.contains(e.target) && e.target.id !== 'burger'){
+    links.classList.remove('mobile-open');
+    document.body.style.overflow = '';
+  }
 });
 
 /* ---------------- Scroll reveal ---------------- */
