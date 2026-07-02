@@ -92,11 +92,11 @@ async function loadJSON(path, fallback){
 }
 
 const FALLBACK_STATS = [
-  { label:"Membres", value:482 },
-  { label:"Pokémon dispo.", value:1260 },
-  { label:"Pokémon vendus", value:3894 },
-  { label:"Transactions", value:9021 },
-  { label:"Niveau moyen", value:47 }
+  { label:"Membres", value:6 },
+  { label:"Pokémon dispo.", value:0 },
+  { label:"Pokémon vendus", value:0 },
+  { label:"Transactions", value:0 },
+  { label:"Niveau moyen", value:0 }
 ];
 const FALLBACK_GRADES = [
   { rang:"Rang I", nom:"Ronfleur", description:"Nouveau dresseur accueilli dans la guilde et sa pension." },
@@ -105,9 +105,9 @@ const FALLBACK_GRADES = [
   { rang:"Rang IV", nom:"Titan", description:"Pilier de la guilde, référence en élevage et combat." }
 ];
 const FALLBACK_TEAM = [
-  { initiales:"GM", nom:"Aldric", role:"Fondateur" },
-  { initiales:"CO", nom:"Sylwen", role:"Co-fondatrice" },
-  { initiales:"PN", nom:"Bramo", role:"Responsable Pension" }
+  { initiales:"RO", nom:"Ronflex_On_Top", role:"Fondateur" },
+  { initiales:"IM", nom:"ImMat_", role:"Co-fondateur" },
+  { initiales:"SR", nom:"Suzu_Rcorps", role:"Gérant de la Pension" }
 ];
 
 async function loadStats(){
