@@ -1,0 +1,552 @@
+[
+  {
+    "id": 0,
+    "name": "Torvégo",
+    "types": [
+      "Roche",
+      "Plante"
+    ],
+    "level": 97,
+    "sex": "♀",
+    "nature": "Calme",
+    "talent": "Absorption",
+    "iv": 104,
+    "ivDisplay": "30/24/15/15/1/19",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 162,
+    "avail": "Disponible"
+  },
+  {
+    "id": 1,
+    "name": "Braisillon",
+    "types": [
+      "Psy",
+      "Feu"
+    ],
+    "level": 7,
+    "sex": "♀",
+    "nature": "Timide",
+    "talent": "Cœur de Fer",
+    "iv": 74,
+    "ivDisplay": "6/3/20/13/22/10",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 151,
+    "avail": "Disponible"
+  },
+  {
+    "id": 2,
+    "name": "Cindracorne",
+    "types": [
+      "Ténèbres",
+      "Sol"
+    ],
+    "level": 69,
+    "sex": "♀",
+    "nature": "Modeste",
+    "talent": "Cœur de Fer",
+    "iv": 83,
+    "ivDisplay": "15/22/25/14/7/0",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 182,
+    "avail": "Disponible"
+  },
+  {
+    "id": 3,
+    "name": "Marégoule",
+    "types": [
+      "Sol"
+    ],
+    "level": 28,
+    "sex": "♂",
+    "nature": "Timide",
+    "talent": "Cœur de Fer",
+    "iv": 73,
+    "ivDisplay": "0/5/0/21/16/31",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 47,
+    "avail": "Disponible"
+  },
+  {
+    "id": 4,
+    "name": "Sylvenoix",
+    "types": [
+      "Insecte"
+    ],
+    "level": 51,
+    "sex": "♂",
+    "nature": "Naïf",
+    "talent": "Ténacité",
+    "iv": 83,
+    "ivDisplay": "12/16/17/16/18/4",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": true,
+    "price": 956,
+    "avail": "Réservé"
+  },
+  {
+    "id": 5,
+    "name": "Fongivert",
+    "types": [
+      "Plante"
+    ],
+    "level": 19,
+    "sex": "♂",
+    "nature": "Timide",
+    "talent": "Absorption",
+    "iv": 69,
+    "ivDisplay": "2/11/11/5/25/15",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 118,
+    "avail": "Disponible"
+  },
+  {
+    "id": 6,
+    "name": "Zaptille",
+    "types": [
+      "Électrik"
+    ],
+    "level": 32,
+    "sex": "♂",
+    "nature": "Doux",
+    "talent": "Absorption",
+    "iv": 112,
+    "ivDisplay": "10/8/28/26/30/10",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 61,
+    "avail": "Disponible"
+  },
+  {
+    "id": 7,
+    "name": "Glaçonelle",
+    "types": [
+      "Électrik",
+      "Eau"
+    ],
+    "level": 63,
+    "sex": "♂",
+    "nature": "Audacieux",
+    "talent": "Absorption",
+    "iv": 71,
+    "ivDisplay": "22/13/7/6/12/11",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 115,
+    "avail": "Disponible"
+  },
+  {
+    "id": 8,
+    "name": "Igloudon",
+    "types": [
+      "Insecte",
+      "Ténèbres"
+    ],
+    "level": 22,
+    "sex": "♀",
+    "nature": "Audacieux",
+    "talent": "Absorption",
+    "iv": 86,
+    "ivDisplay": "17/21/8/18/9/13",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 88,
+    "avail": "Disponible"
+  },
+  {
+    "id": 9,
+    "name": "Grondeur",
+    "types": [
+      "Électrik"
+    ],
+    "level": 19,
+    "sex": "♂",
+    "nature": "Naïf",
+    "talent": "Ténacité",
+    "iv": 112,
+    "ivDisplay": "2/14/20/30/20/26",
+    "ev": "252/252/4",
+    "shiny": true,
+    "legendary": true,
+    "price": 1437,
+    "avail": "Disponible"
+  },
+  {
+    "id": 10,
+    "name": "Venenox",
+    "types": [
+      "Vol"
+    ],
+    "level": 28,
+    "sex": "♀",
+    "nature": "Naïf",
+    "talent": "Peau Dure",
+    "iv": 84,
+    "ivDisplay": "21/11/22/11/5/14",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 59,
+    "avail": "Vendu"
+  },
+  {
+    "id": 11,
+    "name": "Sablior",
+    "types": [
+      "Dragon"
+    ],
+    "level": 46,
+    "sex": "♀",
+    "nature": "Prudent",
+    "talent": "Absorption",
+    "iv": 116,
+    "ivDisplay": "28/25/25/0/28/10",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 128,
+    "avail": "Vendu"
+  },
+  {
+    "id": 12,
+    "name": "Draconelle",
+    "types": [
+      "Électrik",
+      "Roche"
+    ],
+    "level": 28,
+    "sex": "♀",
+    "nature": "Naïf",
+    "talent": "Peau Dure",
+    "iv": 84,
+    "ivDisplay": "8/5/19/4/26/22",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 30,
+    "avail": "Réservé"
+  },
+  {
+    "id": 13,
+    "name": "Aéropic",
+    "types": [
+      "Combat",
+      "Roche"
+    ],
+    "level": 89,
+    "sex": "♂",
+    "nature": "Naïf",
+    "talent": "Cœur de Fer",
+    "iv": 79,
+    "ivDisplay": "30/10/16/13/5/5",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 113,
+    "avail": "Disponible"
+  },
+  {
+    "id": 14,
+    "name": "Mysterine",
+    "types": [
+      "Acier"
+    ],
+    "level": 77,
+    "sex": "♀",
+    "nature": "Jovial",
+    "talent": "Peau Dure",
+    "iv": 67,
+    "ivDisplay": "21/14/12/15/5/0",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 91,
+    "avail": "Vendu"
+  },
+  {
+    "id": 15,
+    "name": "Insectra",
+    "types": [
+      "Psy",
+      "Électrik"
+    ],
+    "level": 6,
+    "sex": "♀",
+    "nature": "Doux",
+    "talent": "Ténacité",
+    "iv": 95,
+    "ivDisplay": "21/14/0/28/29/3",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 34,
+    "avail": "Réservé"
+  },
+  {
+    "id": 16,
+    "name": "Roclide",
+    "types": [
+      "Plante"
+    ],
+    "level": 55,
+    "sex": "♂",
+    "nature": "Prudent",
+    "talent": "Absorption",
+    "iv": 96,
+    "ivDisplay": "30/10/8/28/1/19",
+    "ev": "252/252/4",
+    "shiny": true,
+    "legendary": false,
+    "price": 471,
+    "avail": "Disponible"
+  },
+  {
+    "id": 17,
+    "name": "Ombraline",
+    "types": [
+      "Eau"
+    ],
+    "level": 9,
+    "sex": "♀",
+    "nature": "Jovial",
+    "talent": "Cœur de Fer",
+    "iv": 75,
+    "ivDisplay": "16/0/31/3/3/22",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 68,
+    "avail": "Réservé"
+  },
+  {
+    "id": 18,
+    "name": "Ferrolyn",
+    "types": [
+      "Glace"
+    ],
+    "level": 27,
+    "sex": "♂",
+    "nature": "Doux",
+    "talent": "Absorption",
+    "iv": 82,
+    "ivDisplay": "8/27/17/5/13/12",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 139,
+    "avail": "Disponible"
+  },
+  {
+    "id": 19,
+    "name": "Charmelune",
+    "types": [
+      "Électrik"
+    ],
+    "level": 10,
+    "sex": "♂",
+    "nature": "Modeste",
+    "talent": "Insomnia",
+    "iv": 95,
+    "ivDisplay": "10/29/8/6/20/22",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 128,
+    "avail": "Disponible"
+  },
+  {
+    "id": 20,
+    "name": "Tortoceane",
+    "types": [
+      "Roche"
+    ],
+    "level": 21,
+    "sex": "♂",
+    "nature": "Jovial",
+    "talent": "Régénération",
+    "iv": 127,
+    "ivDisplay": "28/29/21/2/17/30",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 151,
+    "avail": "Disponible"
+  },
+  {
+    "id": 21,
+    "name": "Flamivore",
+    "types": [
+      "Insecte"
+    ],
+    "level": 9,
+    "sex": "♂",
+    "nature": "Modeste",
+    "talent": "Ténacité",
+    "iv": 127,
+    "ivDisplay": "30/27/3/30/29/8",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 52,
+    "avail": "Réservé"
+  },
+  {
+    "id": 22,
+    "name": "Terraclisse",
+    "types": [
+      "Ténèbres"
+    ],
+    "level": 48,
+    "sex": "♂",
+    "nature": "Doux",
+    "talent": "Régénération",
+    "iv": 109,
+    "ivDisplay": "19/22/17/20/29/2",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 51,
+    "avail": "Vendu"
+  },
+  {
+    "id": 23,
+    "name": "Ombrelys",
+    "types": [
+      "Sol"
+    ],
+    "level": 35,
+    "sex": "♂",
+    "nature": "Timide",
+    "talent": "Insomnia",
+    "iv": 71,
+    "ivDisplay": "30/15/3/13/3/7",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 36,
+    "avail": "Vendu"
+  },
+  {
+    "id": 24,
+    "name": "Voltacite",
+    "types": [
+      "Normal"
+    ],
+    "level": 87,
+    "sex": "♀",
+    "nature": "Modeste",
+    "talent": "Ténacité",
+    "iv": 77,
+    "ivDisplay": "23/23/9/11/2/9",
+    "ev": "252/252/4",
+    "shiny": true,
+    "legendary": false,
+    "price": 484,
+    "avail": "Disponible"
+  },
+  {
+    "id": 25,
+    "name": "Nivorage",
+    "types": [
+      "Vol"
+    ],
+    "level": 42,
+    "sex": "♀",
+    "nature": "Timide",
+    "talent": "Insomnia",
+    "iv": 72,
+    "ivDisplay": "2/0/18/15/8/29",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 69,
+    "avail": "Disponible"
+  },
+  {
+    "id": 26,
+    "name": "Grifflame",
+    "types": [
+      "Dragon"
+    ],
+    "level": 42,
+    "sex": "♀",
+    "nature": "Adamant",
+    "talent": "Ténacité",
+    "iv": 83,
+    "ivDisplay": "11/2/26/3/31/10",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 180,
+    "avail": "Vendu"
+  },
+  {
+    "id": 27,
+    "name": "Aquaflor",
+    "types": [
+      "Fée",
+      "Poison"
+    ],
+    "level": 71,
+    "sex": "♀",
+    "nature": "Jovial",
+    "talent": "Insomnia",
+    "iv": 55,
+    "ivDisplay": "11/9/17/2/1/15",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 149,
+    "avail": "Disponible"
+  },
+  {
+    "id": 28,
+    "name": "Toximouth",
+    "types": [
+      "Feu"
+    ],
+    "level": 10,
+    "sex": "♂",
+    "nature": "Adamant",
+    "talent": "Cœur de Fer",
+    "iv": 66,
+    "ivDisplay": "5/13/7/12/17/12",
+    "ev": "252/252/4",
+    "shiny": true,
+    "legendary": false,
+    "price": 637,
+    "avail": "Réservé"
+  },
+  {
+    "id": 29,
+    "name": "Duskram",
+    "types": [
+      "Plante",
+      "Eau"
+    ],
+    "level": 25,
+    "sex": "♀",
+    "nature": "Jovial",
+    "talent": "Ténacité",
+    "iv": 83,
+    "ivDisplay": "15/30/15/23/0/0",
+    "ev": "252/252/4",
+    "shiny": false,
+    "legendary": false,
+    "price": 69,
+    "avail": "Disponible"
+  }
+]

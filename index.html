@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RonflexCorp — Dormir, combattre, commercer.</title>
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <img class="loader-mascot" src="assets/mascot-loader.svg" alt="Mascotte RonflexCorp endormie" width="110" height="88">
+  <span>Chargement de la Pension…</span>
+</div>
+
+<!-- Nav -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#accueil" class="brand">
+      <img class="brand-mark" src="assets/logo.svg" alt="Logo RonflexCorp" width="46" height="46">
+      <span class="brand-text"><b>RonflexCorp</b><span>Dormir · Combattre · Commercer</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#accueil">🏠 Accueil</a>
+      <a href="#presentation">📖 Présentation</a>
+      <a href="#recrutement">🛡️ Recrutement</a>
+      <a href="#pension">💤 Pension</a>
+      <a href="#contact">📞 Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-discord" style="padding:11px 22px;font-size:13.5px;">💬 Discord</a>
+      <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="accueil">
+  <div class="hero-sky-glow"></div>
+  <div class="hero-particles" id="particles"></div>
+  <img class="hero-mountains" src="assets/mountains.svg" alt="" aria-hidden="true">
+  <div class="container hero-inner">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">Guilde Cobblemon</span>
+      <h1>Bienvenue chez <em>RonflexCorp</em></h1>
+      <p>La guilde où chaque dresseur trouve sa place. Un territoire paisible, une communauté soudée, et la meilleure pension de la région.</p>
+      <div class="hero-actions">
+        <a href="#recrutement" class="btn btn-primary">Rejoindre la guilde →</a>
+        <a href="#pension" class="btn btn-outline">Voir la Pension</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="glow-ring"></div>
+      <img class="mascot" src="assets/mascot-hero.svg" alt="Mascotte RonflexCorp, un géant paisible" width="380" height="323">
+    </div>
+  </div>
+  <div class="container stats-wrap">
+    <div class="stats-grid">
+      <div class="stat reveal"><b data-count="482">0</b><span>Membres</span></div>
+      <div class="stat reveal"><b data-count="1260">0</b><span>Pokémon dispo.</span></div>
+      <div class="stat reveal"><b data-count="3894">0</b><span>Pokémon vendus</span></div>
+      <div class="stat reveal"><b data-count="9021">0</b><span>Transactions</span></div>
+      <div class="stat reveal"><b data-count="47">0</b><span>Niveau moyen</span></div>
+    </div>
+  </div>
+</header>
+<svg class="belly-divider" viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0 0 C300 90 1140 90 1440 0 L1440 110 L0 110 Z" fill="#F2E8D5"/></svg>
+
+<!-- PRESENTATION -->
+<section class="section section-cream" id="presentation">
+  <div class="container">
+    <div class="pres-grid">
+      <div class="pres-copy reveal">
+        <span class="eyebrow">Notre histoire</span>
+        <h2 class="section-title">Un géant paisible, une guilde solide</h2>
+        <p>RonflexCorp est née d'une idée simple : bâtir un territoire où l'on peut dresser, échanger et se reposer sans jamais perdre en sérieux ni en ambition. Comme le Pokémon qui nous inspire, nous avançons lentement, mais nous ne reculons jamais.</p>
+        <p>Aujourd'hui, la guilde rassemble des centaines de dresseurs autour d'une pension réputée, d'un système de rangs clair et d'une communauté qui prend soin des siens.</p>
+        <div class="value-list">
+          <div class="value-item"><div class="value-icon">01</div><div><b>Protection</b><p>Chaque membre est accompagné, du recrutement à l'ascension des rangs.</p></div></div>
+          <div class="value-item"><div class="value-icon">02</div><div><b>Sérénité</b><p>Une communauté sans pression, où l'on joue à son rythme.</p></div></div>
+          <div class="value-item"><div class="value-icon">03</div><div><b>Exigence</b><p>Une pension tenue avec rigueur : IV, EV et natures vérifiés.</p></div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="grades">
+          <div class="grade-card"><div class="grade-rank">Rang I</div><h4>Ronfleur</h4><p>Nouveau dresseur accueilli dans la guilde et sa pension.</p></div>
+          <div class="grade-card"><div class="grade-rank">Rang II</div><h4>Gardien</h4><p>Membre actif, contribue aux échanges et à l'entraide.</p></div>
+          <div class="grade-card"><div class="grade-rank">Rang III</div><h4>Sentinelle</h4><p>Encadre les nouveaux et veille sur le territoire.</p></div>
+          <div class="grade-card"><div class="grade-rank">Rang IV</div><h4>Titan</h4><p>Pilier de la guilde, référence en élevage et combat.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Aperçu du territoire</span>
+      <h3 style="font-size:26px;margin-bottom:6px;">Notre galerie</h3>
+    </div>
+    <div class="gallery reveal reveal-stagger">
+      <div class="gallery-item" style="--i:0"><img src="assets/gallery-1.svg" alt="Illustration décorative — prairie et ciel"></div>
+      <div class="gallery-item" style="--i:1"><img src="assets/gallery-2.svg" alt="Illustration décorative — montagnes"></div>
+      <div class="gallery-item" style="--i:2"><img src="assets/gallery-3.svg" alt="Illustration décorative — clairière"></div>
+      <div class="gallery-item" style="--i:3"><img src="assets/gallery-4.svg" alt="Illustration décorative — colline au crépuscule"></div>
+    </div>
+  </div>
+</section>
+<svg class="belly-divider" viewBox="0 0 1440 110" preserveAspectRatio="none" style="transform:scaleY(-1);"><path d="M0 0 C300 90 1140 90 1440 0 L1440 110 L0 110 Z" fill="#173D58"/></svg>
+
+<!-- RECRUTEMENT -->
+<section class="section section-blue" id="recrutement">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:50px;">
+      <span class="eyebrow">Nous rejoindre</span>
+      <h2 class="section-title">Recrutement ouvert</h2>
+      <p class="section-lead">Rejoignez une guilde où sérieux et bonne humeur cohabitent. Voici ce que nous attendons — et ce que nous offrons.</p>
+    </div>
+    <div class="recrut-layout">
+      <div class="reveal">
+        <div class="recrut-block">
+          <h3>✅ Critères</h3>
+          <ul>
+            <li>Avoir 13 ans ou plus</li>
+            <li>Posséder Minecraft Java + le modpack Cobblemon</li>
+            <li>Être présent sur le Discord de la guilde</li>
+            <li>Jouer au moins occasionnellement chaque semaine</li>
+          </ul>
+        </div>
+        <div class="recrut-block">
+          <h3>📜 Règles</h3>
+          <ul>
+            <li>Respect entre membres, en toute circonstance</li>
+            <li>Pas de vol, ni d'arnaque sur les échanges</li>
+            <li>Les prix de la Pension sont fixés par la guilde</li>
+            <li>Griefing et triche entraînent une exclusion immédiate</li>
+          </ul>
+        </div>
+        <div class="recrut-block">
+          <h3>🎯 Attentes</h3>
+          <ul>
+            <li>Participer à la vie de la communauté</li>
+            <li>Contribuer à la Pension avec des Pokémon de qualité</li>
+            <li>Faire preuve d'autonomie et de bonne humeur</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="form-card reveal" id="recruitFormWrap">
+        <div id="recruitFormBody">
+          <h3>Envoyer ma candidature</h3>
+          <p class="form-sub">Complétez le formulaire ci-dessous, un Titan vous répondra sous 48h.</p>
+          <form id="recruitForm">
+            <div class="form-row">
+              <div class="field"><label>Pseudo Minecraft</label><input type="text" placeholder="ex. RonfleurDu42" required></div>
+              <div class="field"><label>Pseudo Discord</label><input type="text" placeholder="ex. dresseur#0000" required></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label>Âge</label><input type="number" min="13" placeholder="ex. 17" required></div>
+              <div class="field"><label>Temps de jeu / semaine</label>
+                <select>
+                  <option>Moins de 3h</option>
+                  <option>3 à 8h</option>
+                  <option>8 à 15h</option>
+                  <option>Plus de 15h</option>
+                </select>
+              </div>
+            </div>
+            <div class="field full" style="margin-bottom:16px;">
+              <label>Expérience sur Cobblemon</label>
+              <select>
+                <option>Débutant</option>
+                <option>Intermédiaire</option>
+                <option>Confirmé</option>
+                <option>Expert / éleveur compétitif</option>
+              </select>
+            </div>
+            <div class="field full" style="margin-bottom:16px;">
+              <label>Motivations</label>
+              <textarea placeholder="Pourquoi voulez-vous rejoindre RonflexCorp ?" required></textarea>
+            </div>
+            <button type="submit" class="btn submit-btn">Envoyer ma candidature <span class="arrow">→</span></button>
+          </form>
+        </div>
+        <div class="form-success" id="recruitSuccess">
+          <svg class="check" viewBox="0 0 60 60"><circle cx="30" cy="30" r="30" fill="#3F7FA6"/><path d="M18 31 L26 39 L42 21" stroke="#F2E8D5" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Candidature envoyée</h3>
+          <p class="form-sub">Merci ! Un membre de la guilde reviendra vers vous très vite sur Discord.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<svg class="belly-divider" viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0 0 C300 90 1140 90 1440 0 L1440 110 L0 110 Z" fill="#FBF8F2"/></svg>
+
+<!-- PENSION -->
+<section class="section" id="pension" style="padding-top:100px;">
+  <div class="container">
+    <div class="pension-head reveal">
+      <div>
+        <span class="eyebrow">Le cœur de la guilde</span>
+        <h2 class="section-title" style="display:flex;align-items:center;gap:14px;">
+          <img src="assets/logo.svg" alt="" width="44" height="44" style="flex-shrink:0;" aria-hidden="true">
+          Pension Pokémon
+        </h2>
+        <p class="section-lead">Parcourez notre catalogue vivant, filtrez par type ou rareté, et trouvez le compagnon idéal.</p>
+      </div>
+    </div>
+
+    <div class="pension-toolbar reveal">
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" id="searchInput" placeholder="Rechercher un Pokémon…">
+      </div>
+      <select id="sortSelect">
+        <option value="recent">Trier : Plus récent</option>
+        <option value="price-asc">Prix croissant</option>
+        <option value="price-desc">Prix décroissant</option>
+        <option value="level-desc">Niveau ↓</option>
+        <option value="iv-desc">IV ↓</option>
+      </select>
+      <select id="availSelect">
+        <option value="all">Toute disponibilité</option>
+        <option value="Disponible">Disponible</option>
+        <option value="Réservé">Réservé</option>
+        <option value="Vendu">Vendu</option>
+      </select>
+    </div>
+
+    <div class="filter-chips reveal" id="typeChips"></div>
+
+    <div class="catalog-grid" id="catalogGrid"></div>
+    <div class="empty-state" id="emptyState">
+      <h3 style="font-size:20px;">😴 Aucun Pokémon ne correspond</h3>
+      <p style="margin-top:8px;">Essayez d'ajuster votre recherche ou vos filtres.</p>
+    </div>
+    <div class="pagination" id="pagination"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section-cream" id="contact">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:50px;">
+      <span class="eyebrow">Restons en contact</span>
+      <h2 class="section-title">Une question ? Écrivez-nous</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-discord reveal">
+        <div>
+          <h3>Rejoignez le Discord</h3>
+          <p>Toute la vie de la guilde s'y passe : recrutement, échanges, événements et support.</p>
+          <a href="#" class="btn btn-discord">💬 Rejoindre le Discord</a>
+        </div>
+        <div class="responsables">
+          <div class="responsable"><div class="resp-avatar">GM</div><span>Aldric<br><small>Fondateur</small></span></div>
+          <div class="responsable"><div class="resp-avatar">CO</div><span>Sylwen<br><small>Co-fondatrice</small></span></div>
+          <div class="responsable"><div class="resp-avatar">PN</div><span>Bramo<br><small>Responsable Pension</small></span></div>
+        </div>
+      </div>
+      <div class="form-card reveal">
+        <h3>Formulaire de contact</h3>
+        <p class="form-sub">Pour toute question hors recrutement.</p>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="field"><label>Nom</label><input type="text" required></div>
+            <div class="field"><label>Email ou Discord</label><input type="text" required></div>
+          </div>
+          <div class="field full" style="margin-bottom:16px;">
+            <label>Message</label>
+            <textarea required placeholder="Votre message…"></textarea>
+          </div>
+          <button type="submit" class="btn submit-btn" style="background:var(--deep-blue);">Envoyer <span class="arrow">→</span></button>
+        </form>
+        <div class="socials" style="margin-top:24px;">
+          <a class="social-btn" href="#" title="Discord" style="background:rgba(63,127,166,0.15);">💬</a>
+          <a class="social-btn" href="#" title="TikTok" style="background:rgba(63,127,166,0.15);">🎵</a>
+          <a class="social-btn" href="#" title="YouTube" style="background:rgba(63,127,166,0.15);">▶️</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo-footer.svg" alt="Logo RonflexCorp" width="38" height="38">
+        <b>RonflexCorp</b>
+      </div>
+      <div class="footer-links">
+        <a href="#accueil">Accueil</a>
+        <a href="#presentation">Présentation</a>
+        <a href="#recrutement">Recrutement</a>
+        <a href="#pension">Pension</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="#" class="btn btn-discord" style="padding:10px 20px;font-size:13px;">💬 Discord</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 RonflexCorp — Guilde Cobblemon. Fan-site non officiel, non affilié à Nintendo, Game Freak ou The Pokémon Company.</span>
+      <span>Mentions légales · Confidentialité</span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>
