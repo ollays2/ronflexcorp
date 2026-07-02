@@ -1,3 +1,29 @@
+/* ---------------- Configuration Discord ---------------- */
+/* Crée un webhook dans Discord : Paramètres du serveur → Intégrations → Webhooks → Nouveau
+   webhook → choisis le salon (ex. #recrutement, #contact) → Copier l'URL du webhook.
+   Colle chaque URL ci-dessous. Tu peux utiliser le même salon/webhook pour les deux
+   si tu préfères tout centraliser au même endroit. */
+const DISCORD_WEBHOOKS = {
+  recruitment: "COLLE_ICI_TON_URL_WEBHOOK_RECRUTEMENT",
+  contact: "COLLE_ICI_TON_URL_WEBHOOK_CONTACT"
+};
+
+function isWebhookConfigured(url){
+  return typeof url === 'string' && url.startsWith('https://discord.com/api/webhooks/');
+}
+
+async function sendToDiscord(webhookUrl, embed){
+  if(!isWebhookConfigured(webhookUrl)){
+    throw new Error('webhook-not-configured');
+  }
+  const res = await fetch(webhookUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ embeds: [embed] })
+  });
+  if(!res.ok) throw new Error('discord-error-' + res.status);
+}
+
 /* ---------------- Loader ---------------- */
 window.addEventListener('load', ()=>{
   setTimeout(()=> document.getElementById('loader').classList.add('hidden'), 500);
@@ -29,7 +55,6 @@ document.querySelectorAll('.reveal-stagger').forEach(parent=>{
 });
 
 /* ---------------- Stat counters ---------------- */
-const statEls = document.querySelectorAll('.stat b');
 const statIO = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
@@ -38,7 +63,6 @@ const statIO = new IntersectionObserver((entries)=>{
     }
   });
 },{threshold:0.4});
-statEls.forEach(el=>statIO.observe(el));
 function animateCount(el){
   const target = parseInt(el.dataset.count,10);
   const dur = 1600; const start = performance.now();
@@ -51,6 +75,79 @@ function animateCount(el){
   }
   requestAnimationFrame(step);
 }
+
+/* ---------------- Contenu dynamique depuis /data (JSON) ---------------- */
+/* Chaque fonction charge son fichier JSON ; si le fichier est absent ou mal formé,
+   une valeur de secours (identique au contenu par défaut du site) prend le relais
+   pour que le site ne casse jamais. */
+async function loadJSON(path, fallback){
+  try{
+    const res = await fetch(path);
+    if(!res.ok) throw new Error('not ok');
+    return await res.json();
+  }catch(err){
+    console.warn(`${path} introuvable ou invalide, utilisation des données par défaut.`);
+    return fallback;
+  }
+}
+
+const FALLBACK_STATS = [
+  { label:"Membres", value:482 },
+  { label:"Pokémon dispo.", value:1260 },
+  { label:"Pokémon vendus", value:3894 },
+  { label:"Transactions", value:9021 },
+  { label:"Niveau moyen", value:47 }
+];
+const FALLBACK_GRADES = [
+  { rang:"Rang I", nom:"Ronfleur", description:"Nouveau dresseur accueilli dans la guilde et sa pension." },
+  { rang:"Rang II", nom:"Gardien", description:"Membre actif, contribue aux échanges et à l'entraide." },
+  { rang:"Rang III", nom:"Sentinelle", description:"Encadre les nouveaux et veille sur le territoire." },
+  { rang:"Rang IV", nom:"Titan", description:"Pilier de la guilde, référence en élevage et combat." }
+];
+const FALLBACK_TEAM = [
+  { initiales:"GM", nom:"Aldric", role:"Fondateur" },
+  { initiales:"CO", nom:"Sylwen", role:"Co-fondatrice" },
+  { initiales:"PN", nom:"Bramo", role:"Responsable Pension" }
+];
+
+async function loadStats(){
+  const stats = await loadJSON('data/stats.json', FALLBACK_STATS);
+  const grid = document.getElementById('statsGrid');
+  grid.innerHTML = stats.map((s,i)=>`
+    <div class="stat" style="--i:${i}">
+      <b data-count="${s.value}">0</b>
+      <span>${s.label}</span>
+    </div>
+  `).join('');
+  grid.querySelectorAll('.stat b').forEach(el=>statIO.observe(el));
+}
+
+async function loadGrades(){
+  const grades = await loadJSON('data/grades.json', FALLBACK_GRADES);
+  const grid = document.getElementById('gradesGrid');
+  grid.innerHTML = grades.map(g=>`
+    <div class="grade-card">
+      <div class="grade-rank">${g.rang}</div>
+      <h4>${g.nom}</h4>
+      <p>${g.description}</p>
+    </div>
+  `).join('');
+}
+
+async function loadTeam(){
+  const team = await loadJSON('data/team.json', FALLBACK_TEAM);
+  const list = document.getElementById('teamList');
+  list.innerHTML = team.map(m=>`
+    <div class="responsable">
+      <div class="resp-avatar">${m.initiales}</div>
+      <span>${m.nom}<br><small>${m.role}</small></span>
+    </div>
+  `).join('');
+}
+
+loadStats();
+loadGrades();
+loadTeam();
 
 /* ---------------- Hero particles (feuilles / poussières) ---------------- */
 const particleWrap = document.getElementById('particles');
@@ -68,17 +165,77 @@ for(let i=0;i<22;i++){
 }
 
 /* ---------------- Recruitment form ---------------- */
-document.getElementById('recruitForm').addEventListener('submit', (e)=>{
+document.getElementById('recruitForm').addEventListener('submit', async (e)=>{
   e.preventDefault();
-  document.getElementById('recruitFormBody').style.display='none';
-  document.getElementById('recruitSuccess').classList.add('show');
+  const form = e.target;
+  const btn = form.querySelector('.submit-btn');
+  const data = new FormData(form);
+  const val = (k)=> (data.get(k) || '—').toString().trim() || '—';
+  const originalLabel = btn.innerHTML;
+  btn.innerHTML = 'Envoi en cours…';
+  btn.disabled = true;
+
+  try{
+    await sendToDiscord(DISCORD_WEBHOOKS.recruitment, {
+      title: '🛡️ Nouvelle candidature — RonflexCorp',
+      color: 4093862,
+      fields: [
+        { name: 'Pseudo Minecraft', value: val('pseudo_minecraft'), inline: true },
+        { name: 'Pseudo Discord', value: val('pseudo_discord'), inline: true },
+        { name: 'Âge', value: val('age'), inline: true },
+        { name: 'Temps de jeu / semaine', value: val('temps_jeu'), inline: true },
+        { name: 'Expérience Cobblemon', value: val('experience'), inline: true },
+        { name: 'Motivations', value: val('motivations'), inline: false }
+      ],
+      timestamp: new Date().toISOString()
+    });
+    document.getElementById('recruitFormBody').style.display='none';
+    document.getElementById('recruitSuccess').classList.add('show');
+  }catch(err){
+    btn.innerHTML = originalLabel;
+    btn.disabled = false;
+    if(err.message === 'webhook-not-configured'){
+      alert("Le webhook Discord du recrutement n'est pas encore configuré.\nOuvre js/main.js et renseigne DISCORD_WEBHOOKS.recruitment (voir le README).");
+    }else{
+      alert("L'envoi a échoué. Vérifie ta connexion et réessaie, ou contacte-nous directement sur Discord.");
+    }
+  }
 });
-document.getElementById('contactForm').addEventListener('submit', (e)=>{
+
+document.getElementById('contactForm').addEventListener('submit', async (e)=>{
   e.preventDefault();
-  const btn = e.target.querySelector('.submit-btn');
-  btn.textContent = 'Message envoyé ✓';
-  btn.style.background = '#3F7FA6';
-  e.target.reset();
+  const form = e.target;
+  const btn = form.querySelector('.submit-btn');
+  const data = new FormData(form);
+  const val = (k)=> (data.get(k) || '—').toString().trim() || '—';
+  const originalLabel = btn.innerHTML;
+  btn.innerHTML = 'Envoi en cours…';
+  btn.disabled = true;
+
+  try{
+    await sendToDiscord(DISCORD_WEBHOOKS.contact, {
+      title: '📞 Nouveau message — Formulaire de contact',
+      color: 4093862,
+      fields: [
+        { name: 'Nom', value: val('nom'), inline: true },
+        { name: 'Email / Discord', value: val('contact'), inline: true },
+        { name: 'Message', value: val('message'), inline: false }
+      ],
+      timestamp: new Date().toISOString()
+    });
+    btn.innerHTML = 'Message envoyé ✓';
+    btn.style.background = '#3F7FA6';
+    form.reset();
+    setTimeout(()=>{ btn.innerHTML = originalLabel; btn.style.background=''; btn.disabled=false; }, 3000);
+  }catch(err){
+    btn.innerHTML = originalLabel;
+    btn.disabled = false;
+    if(err.message === 'webhook-not-configured'){
+      alert("Le webhook Discord du contact n'est pas encore configuré.\nOuvre js/main.js et renseigne DISCORD_WEBHOOKS.contact (voir le README).");
+    }else{
+      alert("L'envoi a échoué. Vérifie ta connexion et réessaie, ou contacte-nous directement sur Discord.");
+    }
+  }
 });
 
 /* ---------------- Pension Pokémon catalog ---------------- */
