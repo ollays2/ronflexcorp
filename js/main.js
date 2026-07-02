@@ -271,10 +271,12 @@ function generateDemoData(){
     const price = legendary ? 800+Math.floor(seededRand(i*29+8)*1200) : (shiny? 250+Math.floor(seededRand(i*31+9)*400) : 20+Math.floor(seededRand(i*37+10)*180));
     const avail = ["Disponible","Disponible","Disponible","Réservé","Vendu"][Math.floor(seededRand(i*41+11)*5)];
     const sex = seededRand(i*43+12) > 0.5 ? "♂" : (seededRand(i*47+13) > 0.15 ? "♀" : "—");
+    const tc = seededRand(i*67+17) > 0.75;
     return {
       id:i, name, types:[t1,t2].filter(Boolean), level, sex,
       nature: NATURES[Math.floor(seededRand(i*53+14)*NATURES.length)],
       talent: ["Ténacité","Peau Dure","Régénération","Cœur de Fer","Insomnia","Absorption"][Math.floor(seededRand(i*59+15)*6)],
+      tc, sprite: null,
       iv: ivSum, ivDisplay, ev: "252/252/4", shiny, legendary, price, avail, sex
     };
   });
@@ -355,7 +357,8 @@ function renderCatalog(){
     grid.innerHTML = pageItems.map(m=>`
       <div class="mon-card ${m.legendary?'legendary':''} ${m.shiny?'shiny':''}">
         <div class="mon-media">
-          ${monSvg(m)}
+          ${m.sprite ? `<img class="mon-sprite" src="${m.sprite}" alt="${m.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">` : ''}
+          <div class="mon-fallback-icon" style="${m.sprite ? 'display:none;' : 'display:flex;'}">${monSvg(m)}</div>
           ${m.legendary?'<span class="mon-legendary-badge">★ Légendaire</span>':''}
           <span class="mon-avail ${m.avail==='Réservé'?'reserved':m.avail==='Vendu'?'sold':''}">${m.avail}</span>
         </div>
@@ -364,7 +367,7 @@ function renderCatalog(){
           <div class="mon-types">${m.types.map(t=>`<span class="type-pill" style="background:${TYPE_COLORS[t]}">${t}</span>`).join('')}</div>
           <div class="mon-stats">
             <div>Nature <b>${m.nature}</b></div>
-            <div>Talent <b>${m.talent}</b></div>
+            <div>Talent <b>${m.talent}</b>${m.tc?' <span class="tc-tag">TC</span>':''}</div>
             <div class="iv-row" style="grid-column:1/-1;">IV (PV/Att/Déf/AtSp/DéfSp/Vit) <b>${m.ivDisplay}</b></div>
             <div>EV <b>${m.ev}</b></div>
           </div>
