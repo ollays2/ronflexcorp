@@ -90,7 +90,7 @@ function getFiltered(){
   let list = MONS.filter(m=>{
     if(state.search && !m.name.toLowerCase().includes(state.search.toLowerCase())) return false;
     if(state.avail!=='all' && m.avail !== state.avail) return false;
-    if(state.types.size>0 && !m.types.some(t=>state.types.has(t))) return false;
+    if(state.types.size>0 && ![...state.types].every(t=>m.types.includes(t))) return false;
     return true;
   });
   switch(state.sort){
