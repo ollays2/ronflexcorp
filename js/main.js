@@ -4,8 +4,8 @@
    Colle chaque URL ci-dessous. Tu peux utiliser le même salon/webhook pour les deux
    si tu préfères tout centraliser au même endroit. */
 const DISCORD_WEBHOOKS = {
-  recruitment: "COLLE_ICI_TON_URL_WEBHOOK_RECRUTEMENT",
-  contact: "COLLE_ICI_TON_URL_WEBHOOK_CONTACT"
+  recruitment: "https://discord.com/api/webhooks/1522621547246780569/5undPAVodPKY8taKA--F1hL1COPHJnkY72quSc90rc8A2b9Jiweirh0wLy8NUJrVME-I",
+  contact: "https://discord.com/api/webhooks/1522630606159085818/pesaptEqdXzNabFPdXNQcy2AJ3BT-oibZu4UZGidgF8imL_v8JjuxXZh-d38rehpagcN"
 };
 
 function isWebhookConfigured(url){
