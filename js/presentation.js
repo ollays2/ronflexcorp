@@ -1,9 +1,9 @@
 /* ---------------- Rangs de la guilde (Présentation) ---------------- */
 const FALLBACK_GRADES = [
-  { rang:"Rang I", nom:"Ronfleur", description:"Nouveau dresseur accueilli dans la guilde et sa pension." },
-  { rang:"Rang II", nom:"Gardien", description:"Membre actif, contribue aux échanges et à l'entraide." },
-  { rang:"Rang III", nom:"Sentinelle", description:"Encadre les nouveaux et veille sur le territoire." },
-  { rang:"Rang IV", nom:"Titan", description:"Pilier de la guilde, référence en élevage et combat." }
+  { rang:"Rang I", icon:"💤", nom:"Ronfleur", couleur:"#F2E8D5", description:"Vient d'arriver, encore à moitié endormi." },
+  { rang:"Rang II", icon:"🌿", nom:"Somnambule", couleur:"#5C9A5C", description:"Se déplace dans la guilde même les yeux fermés — actif, présent, fiable." },
+  { rang:"Rang III", icon:"🛡️", nom:"Gardien du Territoire", couleur:"#3F7FA6", description:"Veille sur les nouveaux comme Ronflex veille sur sa clairière." },
+  { rang:"Rang IV", icon:"⭐", nom:"Titan Assoupi", couleur:"#C9A66B", description:"Un pilier si imposant qu'on le croirait immobile — jusqu'à ce qu'il agisse." }
 ];
 
 async function loadGrades(){
@@ -11,8 +11,8 @@ async function loadGrades(){
   const grid = document.getElementById('gradesGrid');
   if(!grid) return;
   grid.innerHTML = grades.map(g=>`
-    <div class="grade-card">
-      <div class="grade-rank">${g.rang}</div>
+    <div class="grade-card" style="--grade-color:${g.couleur || 'var(--gold)'}">
+      <div class="grade-rank">${g.icon ? g.icon+' ' : ''}${g.rang}</div>
       <h4>${g.nom}</h4>
       <p>${g.description}</p>
     </div>

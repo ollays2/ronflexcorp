@@ -198,16 +198,18 @@ h1,h2,h3,h4{font-family:var(--ff-display);font-weight:600;color:var(--deep-blue-
 
 .grades{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:20px;}
 .grade-card{
+  --grade-color:var(--gold);
   background:var(--white);border-radius:var(--radius-md);padding:28px 22px;
   box-shadow:var(--shadow-card);position:relative;overflow:hidden;
+  border-top:4px solid var(--grade-color);
   transition:transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s ease;
 }
 .grade-card:hover{transform:translateY(-8px);box-shadow:0 30px 50px -20px rgba(23,61,88,0.4);}
 .grade-card::after{
   content:"";position:absolute;right:-30px;top:-30px;width:100px;height:100px;border-radius:50%;
-  background:radial-gradient(circle, rgba(63,127,166,0.15), transparent 70%);
+  background:radial-gradient(circle, color-mix(in srgb, var(--grade-color) 25%, transparent), transparent 70%);
 }
-.grade-rank{font-family:var(--ff-mono);font-size:11px;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;}
+.grade-rank{font-family:var(--ff-mono);font-size:11px;color:var(--grade-color);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;}
 .grade-card h4{font-size:20px;margin-bottom:8px;}
 .grade-card p{font-size:13.5px;color:var(--ink-soft);}
 
