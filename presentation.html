@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RonflexCorp — Dormir, combattre, commercer.</title>
+<title>Présentation — RonflexCorp</title>
 <link rel="icon" type="image/jpeg" href="assets/Snorlax_600_3331126.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +26,8 @@
       <span class="brand-text"><b>RonflexCorp</b><span>Dormir · Combattre · Commercer</span></span>
     </a>
     <div class="nav-links">
-      <a href="index.html" class="active">🏠 Accueil</a>
-      <a href="presentation.html">📖 Présentation</a>
+      <a href="index.html">🏠 Accueil</a>
+      <a href="presentation.html" class="active">📖 Présentation</a>
       <a href="recrutement.html">🛡️ Recrutement</a>
       <div class="nav-dropdown">
         <button type="button" class="nav-drop-toggle">🛒 Commerce <span class="drop-arrow">▾</span></button>
@@ -47,65 +47,34 @@
   </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero" id="accueil">
-  <div class="hero-sky-glow"></div>
-  <div class="hero-particles" id="particles"></div>
-  <img class="hero-mountains" src="assets/mountains.svg" alt="" aria-hidden="true">
-  <div class="container hero-inner">
-    <div class="hero-copy reveal">
-      <span class="eyebrow">Guilde Cobblemon</span>
-      <h1>Bienvenue chez <em>RonflexCorp</em></h1>
-      <p>La guilde où chaque dresseur trouve sa place. Un territoire paisible, une communauté soudée, et la meilleure pension de la région.</p>
-      <div class="hero-actions">
-        <a href="recrutement.html" class="btn btn-primary">Rejoindre la guilde →</a>
-        <a href="commerce.html" class="btn btn-outline">Voir le Commerce</a>
+<!-- PRESENTATION -->
+<section class="section section-cream" id="presentation" style="padding-top:150px;">
+  <div class="container">
+    <div class="pres-grid">
+      <div class="pres-copy reveal">
+        <span class="eyebrow">Notre histoire</span>
+        <h2 class="section-title">Un géant paisible, une guilde solide</h2>
+        <p>RonflexCorp est née d'une idée simple : bâtir un territoire où l'on peut dresser, échanger et se reposer sans jamais perdre en sérieux ni en ambition. Comme le Pokémon qui nous inspire, nous avançons lentement, mais nous ne reculons jamais.</p>
+        <p>Aujourd'hui, la guilde rassemble des centaines de dresseurs autour d'une pension réputée, d'un système de rangs clair et d'une communauté qui prend soin des siens.</p>
+        <div class="value-list">
+          <div class="value-item"><div class="value-icon">01</div><div><b>Protection</b><p>Chaque membre est accompagné, du recrutement à l'ascension des rangs.</p></div></div>
+          <div class="value-item"><div class="value-icon">02</div><div><b>Sérénité</b><p>Une communauté sans pression, où l'on joue à son rythme.</p></div></div>
+          <div class="value-item"><div class="value-icon">03</div><div><b>Exigence</b><p>Une pension tenue avec rigueur : IV, EV et natures vérifiés.</p></div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="grades reveal reveal-stagger" id="gradesGrid"></div>
       </div>
     </div>
-    <div class="hero-visual reveal">
-      <div class="glow-ring"></div>
-      <img class="mascot" src="assets/snorlax-foret.jpg" alt="Ronflex, mascotte de RonflexCorp, un géant paisible" width="380" height="323" style="border-radius:28px;object-fit:cover;">
+    <div class="reveal">
+      <span class="eyebrow">Aperçu du territoire</span>
+      <h3 style="font-size:26px;margin-bottom:6px;">Notre galerie</h3>
     </div>
-  </div>
-  <div class="container stats-wrap">
-    <div class="stats-grid reveal reveal-stagger" id="statsGrid"></div>
-  </div>
-</header>
-<svg class="belly-divider" viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0 0 C300 90 1140 90 1440 0 L1440 110 L0 110 Z" fill="#F2E8D5"/></svg>
-
-<!-- HUB : accès rapide aux autres pages -->
-<section class="section section-cream" id="hub">
-  <div class="container">
-    <div class="reveal" style="margin-bottom:40px;">
-      <span class="eyebrow">Explorer le site</span>
-      <h2 class="section-title">Toute la guilde, en un coup d'œil</h2>
-      <p class="section-lead">Découvrez qui nous sommes, rejoignez l'aventure ou faites un tour au comptoir.</p>
-    </div>
-    <div class="hub-grid reveal reveal-stagger">
-      <a class="hub-card" href="presentation.html" style="--i:0">
-        <span class="hub-icon">📖</span>
-        <h4>Présentation</h4>
-        <p>Notre histoire, nos valeurs et les rangs de la guilde.</p>
-        <span class="hub-link">Découvrir →</span>
-      </a>
-      <a class="hub-card" href="recrutement.html" style="--i:1">
-        <span class="hub-icon">🛡️</span>
-        <h4>Recrutement</h4>
-        <p>Critères, règles et formulaire de candidature.</p>
-        <span class="hub-link">Postuler →</span>
-      </a>
-      <a class="hub-card" href="commerce.html" style="--i:2">
-        <span class="hub-icon">🛒</span>
-        <h4>Commerce</h4>
-        <p>PokeShop, ItemShop et ServiceShop de la guilde.</p>
-        <span class="hub-link">Visiter →</span>
-      </a>
-      <a class="hub-card" href="contact.html" style="--i:3">
-        <span class="hub-icon">📞</span>
-        <h4>Contact</h4>
-        <p>Une question ? Écrivez-nous ou rejoignez le Discord.</p>
-        <span class="hub-link">Écrire →</span>
-      </a>
+    <div class="gallery reveal reveal-stagger">
+      <div class="gallery-item" style="--i:0"><img src="assets/snorlax-foret.jpg" alt="Ronflex endormi dans une clairière fleurie"></div>
+      <div class="gallery-item" style="--i:1"><img src="assets/snorlax-cafe.jpg" alt="Ronflex et ses compagnons endormis dans la prairie"></div>
+      <div class="gallery-item" style="--i:2"><img src="assets/snorlax-cafe.jpg" alt="Ronflex et ses compagnons endormis dans la prairie"></div>
+      <div class="gallery-item" style="--i:3"><img src="assets/snorlax-foret.jpg" alt="Ronflex endormi dans une clairière fleurie"></div>
     </div>
   </div>
 </section>
@@ -134,6 +103,6 @@
   </div>
 </footer>
 <script src="js/main.js" defer></script>
-<script src="js/home.js" defer></script>
+<script src="js/presentation.js" defer></script>
 </body>
 </html>

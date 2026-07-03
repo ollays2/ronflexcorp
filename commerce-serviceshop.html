@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RonflexCorp — Dormir, combattre, commercer.</title>
+<title>ServiceShop — Commerce RonflexCorp</title>
 <link rel="icon" type="image/jpeg" href="assets/Snorlax_600_3331126.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,11 +26,11 @@
       <span class="brand-text"><b>RonflexCorp</b><span>Dormir · Combattre · Commercer</span></span>
     </a>
     <div class="nav-links">
-      <a href="index.html" class="active">🏠 Accueil</a>
+      <a href="index.html">🏠 Accueil</a>
       <a href="presentation.html">📖 Présentation</a>
       <a href="recrutement.html">🛡️ Recrutement</a>
       <div class="nav-dropdown">
-        <button type="button" class="nav-drop-toggle">🛒 Commerce <span class="drop-arrow">▾</span></button>
+        <button type="button" class="nav-drop-toggle active">🛒 Commerce <span class="drop-arrow">▾</span></button>
         <div class="nav-drop-menu">
           <a href="commerce.html">🛒 Vue d'ensemble</a>
           <a href="commerce-pokeshop.html">🐾 PokeShop</a>
@@ -47,65 +47,52 @@
   </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero" id="accueil">
-  <div class="hero-sky-glow"></div>
-  <div class="hero-particles" id="particles"></div>
-  <img class="hero-mountains" src="assets/mountains.svg" alt="" aria-hidden="true">
-  <div class="container hero-inner">
-    <div class="hero-copy reveal">
-      <span class="eyebrow">Guilde Cobblemon</span>
-      <h1>Bienvenue chez <em>RonflexCorp</em></h1>
-      <p>La guilde où chaque dresseur trouve sa place. Un territoire paisible, une communauté soudée, et la meilleure pension de la région.</p>
-      <div class="hero-actions">
-        <a href="recrutement.html" class="btn btn-primary">Rejoindre la guilde →</a>
-        <a href="commerce.html" class="btn btn-outline">Voir le Commerce</a>
-      </div>
-    </div>
-    <div class="hero-visual reveal">
-      <div class="glow-ring"></div>
-      <img class="mascot" src="assets/snorlax-foret.jpg" alt="Ronflex, mascotte de RonflexCorp, un géant paisible" width="380" height="323" style="border-radius:28px;object-fit:cover;">
-    </div>
-  </div>
-  <div class="container stats-wrap">
-    <div class="stats-grid reveal reveal-stagger" id="statsGrid"></div>
-  </div>
-</header>
-<svg class="belly-divider" viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0 0 C300 90 1140 90 1440 0 L1440 110 L0 110 Z" fill="#F2E8D5"/></svg>
-
-<!-- HUB : accès rapide aux autres pages -->
-<section class="section section-cream" id="hub">
+<!-- SERVICESHOP -->
+<section class="section section-blue" id="serviceshop" style="padding-top:150px;">
   <div class="container">
     <div class="reveal" style="margin-bottom:40px;">
-      <span class="eyebrow">Explorer le site</span>
-      <h2 class="section-title">Toute la guilde, en un coup d'œil</h2>
-      <p class="section-lead">Découvrez qui nous sommes, rejoignez l'aventure ou faites un tour au comptoir.</p>
+      <span class="eyebrow"><a href="commerce.html" style="color:inherit;">Commerce</a> · ServiceShop</span>
+      <h2 class="section-title">ServiceShop</h2>
+      <p class="section-lead">Nos Titans mettent leur expertise à votre service : élevage sur-mesure, reproduction compétitive et accompagnement de rang.</p>
     </div>
-    <div class="hub-grid reveal reveal-stagger">
-      <a class="hub-card" href="presentation.html" style="--i:0">
-        <span class="hub-icon">📖</span>
-        <h4>Présentation</h4>
-        <p>Notre histoire, nos valeurs et les rangs de la guilde.</p>
-        <span class="hub-link">Découvrir →</span>
-      </a>
-      <a class="hub-card" href="recrutement.html" style="--i:1">
-        <span class="hub-icon">🛡️</span>
-        <h4>Recrutement</h4>
-        <p>Critères, règles et formulaire de candidature.</p>
-        <span class="hub-link">Postuler →</span>
-      </a>
-      <a class="hub-card" href="commerce.html" style="--i:2">
-        <span class="hub-icon">🛒</span>
-        <h4>Commerce</h4>
-        <p>PokeShop, ItemShop et ServiceShop de la guilde.</p>
-        <span class="hub-link">Visiter →</span>
-      </a>
-      <a class="hub-card" href="contact.html" style="--i:3">
-        <span class="hub-icon">📞</span>
-        <h4>Contact</h4>
-        <p>Une question ? Écrivez-nous ou rejoignez le Discord.</p>
-        <span class="hub-link">Écrire →</span>
-      </a>
+
+    <div class="shop-grid reveal reveal-stagger">
+      <div class="shop-card" style="--i:0">
+        <span class="shop-icon">🥚</span>
+        <h4>Élevage IV/EV sur-mesure</h4>
+        <p>Un Titan vous éclot le Pokémon de vos rêves selon vos IV, nature et talent souhaités.</p>
+        <div class="shop-footer"><span class="shop-price">Dès 100$</span><span class="shop-badge">Sur devis</span></div>
+      </div>
+      <div class="shop-card" style="--i:1">
+        <span class="shop-icon">✨</span>
+        <h4>Reproduction Shiny</h4>
+        <p>Chasse ciblée pour obtenir la variante chromatique de l'espèce de votre choix.</p>
+        <div class="shop-footer"><span class="shop-price">Dès 300$</span><span class="shop-badge">Sur devis</span></div>
+      </div>
+      <div class="shop-card" style="--i:2">
+        <span class="shop-icon">🎓</span>
+        <h4>Coaching combat</h4>
+        <p>Séance avec un Titan pour progresser en stratégie de combat et team-building.</p>
+        <div class="shop-footer"><span class="shop-price">50$/h</span><span class="shop-badge">Disponible</span></div>
+      </div>
+      <div class="shop-card" style="--i:3">
+        <span class="shop-icon">🚚</span>
+        <h4>Transport &amp; dépôt</h4>
+        <p>Faites transporter ou stocker vos Pokémon en toute sécurité à la Pension.</p>
+        <div class="shop-footer"><span class="shop-price">15$</span><span class="shop-badge">Disponible</span></div>
+      </div>
+      <div class="shop-card" style="--i:4">
+        <span class="shop-icon">🏷️</span>
+        <h4>Accompagnement de rang</h4>
+        <p>Un Titan vous guide pour gravir plus vite les échelons de la guilde.</p>
+        <div class="shop-footer"><span class="shop-price">Offert</span><span class="shop-badge">Membres</span></div>
+      </div>
+      <div class="shop-card" style="--i:5">
+        <span class="shop-icon">🛌</span>
+        <h4>Garde de Pokémon</h4>
+        <p>Confiez vos Pokémon à la Pension pendant vos absences prolongées.</p>
+        <div class="shop-footer"><span class="shop-price">10$/semaine</span><span class="shop-badge">Disponible</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -134,6 +121,5 @@
   </div>
 </footer>
 <script src="js/main.js" defer></script>
-<script src="js/home.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recrutement — RonflexCorp</title>
+<link rel="icon" type="image/jpeg" href="assets/Snorlax_600_3331126.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <img class="loader-mascot" src="assets/Snorlax_600_3331126.jpg" alt="Mascotte RonflexCorp endormie" width="110" height="88" style="border-radius:24px;object-fit:cover;">
+  <span>Ronflex se réveille…</span>
+</div>
+
+<!-- Nav -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="assets/Snorlax_600_3331126.jpg" alt="Logo RonflexCorp" width="46" height="46" style="border-radius:50%;object-fit:cover;">
+      <span class="brand-text"><b>RonflexCorp</b><span>Dormir · Combattre · Commercer</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">🏠 Accueil</a>
+      <a href="presentation.html">📖 Présentation</a>
+      <a href="recrutement.html" class="active">🛡️ Recrutement</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-drop-toggle">🛒 Commerce <span class="drop-arrow">▾</span></button>
+        <div class="nav-drop-menu">
+          <a href="commerce.html">🛒 Vue d'ensemble</a>
+          <a href="commerce-pokeshop.html">🐾 PokeShop</a>
+          <a href="commerce-itemshop.html">🎒 ItemShop</a>
+          <a href="commerce-serviceshop.html">🔧 ServiceShop</a>
+        </div>
+      </div>
+      <a href="contact.html">📞 Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-discord" style="padding:11px 22px;font-size:13.5px;">💬 Discord</a>
+      <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<!-- RECRUTEMENT -->
+<section class="section section-blue" id="recrutement" style="padding-top:150px;">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:50px;">
+      <span class="eyebrow">Nous rejoindre</span>
+      <h2 class="section-title">Recrutement ouvert</h2>
+      <p class="section-lead">Rejoignez une guilde où sérieux et bonne humeur cohabitent. Voici ce que nous attendons — et ce que nous offrons.</p>
+    </div>
+    <div class="recrut-layout">
+      <div class="reveal">
+        <div class="recrut-block">
+          <h3>✅ Critères</h3>
+          <ul>
+            <li>Avoir 13 ans ou plus</li>
+            <li>Posséder Minecraft Java + le modpack Cobblemon</li>
+            <li>Être présent sur le Discord de la guilde</li>
+            <li>Jouer au moins occasionnellement chaque semaine</li>
+          </ul>
+        </div>
+        <div class="recrut-block">
+          <h3>📜 Règles</h3>
+          <ul>
+            <li>Respect entre membres, en toute circonstance</li>
+            <li>Pas de vol, ni d'arnaque sur les échanges</li>
+            <li>Les prix de la Pension sont fixés par la guilde</li>
+            <li>Griefing et triche entraînent une exclusion immédiate</li>
+          </ul>
+        </div>
+        <div class="recrut-block">
+          <h3>🎯 Attentes</h3>
+          <ul>
+            <li>Participer à la vie de la communauté</li>
+            <li>Contribuer à la Pension avec des Pokémon de qualité</li>
+            <li>Faire preuve d'autonomie et de bonne humeur</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="form-card reveal" id="recruitFormWrap">
+        <div id="recruitFormBody">
+          <h3>Envoyer ma candidature</h3>
+          <p class="form-sub">Complétez le formulaire ci-dessous, un Titan vous répondra sous 48h.</p>
+          <form id="recruitForm">
+            <div class="form-row">
+              <div class="field"><label>Pseudo Minecraft</label><input type="text" name="pseudo_minecraft" placeholder="ex. RonfleurDu42" required></div>
+              <div class="field"><label>Pseudo Discord</label><input type="text" name="pseudo_discord" placeholder="ex. dresseur#0000" required></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label>Âge</label><input type="number" name="age" min="13" placeholder="ex. 17" required></div>
+              <div class="field"><label>Temps de jeu / semaine</label>
+                <select name="temps_jeu">
+                  <option>Moins de 3h</option>
+                  <option>3 à 8h</option>
+                  <option>8 à 15h</option>
+                  <option>Plus de 15h</option>
+                </select>
+              </div>
+            </div>
+            <div class="field full" style="margin-bottom:16px;">
+              <label>Expérience sur Cobblemon</label>
+              <select name="experience">
+                <option>Débutant</option>
+                <option>Intermédiaire</option>
+                <option>Confirmé</option>
+                <option>Expert / éleveur compétitif</option>
+              </select>
+            </div>
+            <div class="field full" style="margin-bottom:16px;">
+              <label>Motivations</label>
+              <textarea name="motivations" placeholder="Pourquoi voulez-vous rejoindre RonflexCorp ?" required></textarea>
+            </div>
+            <button type="submit" class="btn submit-btn">Envoyer ma candidature <span class="arrow">→</span></button>
+          </form>
+        </div>
+        <div class="form-success" id="recruitSuccess">
+          <svg class="check" viewBox="0 0 60 60"><circle cx="30" cy="30" r="30" fill="#3F7FA6"/><path d="M18 31 L26 39 L42 21" stroke="#F2E8D5" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Candidature envoyée</h3>
+          <p class="form-sub">Merci ! Un membre de la guilde reviendra vers vous très vite sur Discord.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/Snorlax_600_3331126.jpg" alt="Logo RonflexCorp" width="38" height="38" style="border-radius:50%;object-fit:cover;">
+        <b>RonflexCorp</b>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html">Présentation</a>
+        <a href="recrutement.html">Recrutement</a>
+        <a href="commerce.html">Commerce</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="#" class="btn btn-discord" style="padding:10px 20px;font-size:13px;">💬 Discord</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 RonflexCorp — Guilde Cobblemon. Fan-site non officiel, non affilié à Nintendo, Game Freak ou The Pokémon Company.</span>
+      <span>Mentions légales · Confidentialité</span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+<script src="js/recrutement.js" defer></script>
+</body>
+</html>

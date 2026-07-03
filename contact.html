@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RonflexCorp — Dormir, combattre, commercer.</title>
+<title>Contact — RonflexCorp</title>
 <link rel="icon" type="image/jpeg" href="assets/Snorlax_600_3331126.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
       <span class="brand-text"><b>RonflexCorp</b><span>Dormir · Combattre · Commercer</span></span>
     </a>
     <div class="nav-links">
-      <a href="index.html" class="active">🏠 Accueil</a>
+      <a href="index.html">🏠 Accueil</a>
       <a href="presentation.html">📖 Présentation</a>
       <a href="recrutement.html">🛡️ Recrutement</a>
       <div class="nav-dropdown">
@@ -38,7 +38,7 @@
           <a href="commerce-serviceshop.html">🔧 ServiceShop</a>
         </div>
       </div>
-      <a href="contact.html">📞 Contact</a>
+      <a href="contact.html" class="active">📞 Contact</a>
     </div>
     <div class="nav-cta">
       <a href="#" class="btn btn-discord" style="padding:11px 22px;font-size:13.5px;">💬 Discord</a>
@@ -47,65 +47,42 @@
   </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero" id="accueil">
-  <div class="hero-sky-glow"></div>
-  <div class="hero-particles" id="particles"></div>
-  <img class="hero-mountains" src="assets/mountains.svg" alt="" aria-hidden="true">
-  <div class="container hero-inner">
-    <div class="hero-copy reveal">
-      <span class="eyebrow">Guilde Cobblemon</span>
-      <h1>Bienvenue chez <em>RonflexCorp</em></h1>
-      <p>La guilde où chaque dresseur trouve sa place. Un territoire paisible, une communauté soudée, et la meilleure pension de la région.</p>
-      <div class="hero-actions">
-        <a href="recrutement.html" class="btn btn-primary">Rejoindre la guilde →</a>
-        <a href="commerce.html" class="btn btn-outline">Voir le Commerce</a>
-      </div>
-    </div>
-    <div class="hero-visual reveal">
-      <div class="glow-ring"></div>
-      <img class="mascot" src="assets/snorlax-foret.jpg" alt="Ronflex, mascotte de RonflexCorp, un géant paisible" width="380" height="323" style="border-radius:28px;object-fit:cover;">
-    </div>
-  </div>
-  <div class="container stats-wrap">
-    <div class="stats-grid reveal reveal-stagger" id="statsGrid"></div>
-  </div>
-</header>
-<svg class="belly-divider" viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0 0 C300 90 1140 90 1440 0 L1440 110 L0 110 Z" fill="#F2E8D5"/></svg>
-
-<!-- HUB : accès rapide aux autres pages -->
-<section class="section section-cream" id="hub">
+<!-- CONTACT -->
+<section class="section section-cream" id="contact" style="padding-top:150px;">
   <div class="container">
-    <div class="reveal" style="margin-bottom:40px;">
-      <span class="eyebrow">Explorer le site</span>
-      <h2 class="section-title">Toute la guilde, en un coup d'œil</h2>
-      <p class="section-lead">Découvrez qui nous sommes, rejoignez l'aventure ou faites un tour au comptoir.</p>
+    <div class="reveal" style="margin-bottom:50px;">
+      <span class="eyebrow">Restons en contact</span>
+      <h2 class="section-title">Une question ? Écrivez-nous</h2>
     </div>
-    <div class="hub-grid reveal reveal-stagger">
-      <a class="hub-card" href="presentation.html" style="--i:0">
-        <span class="hub-icon">📖</span>
-        <h4>Présentation</h4>
-        <p>Notre histoire, nos valeurs et les rangs de la guilde.</p>
-        <span class="hub-link">Découvrir →</span>
-      </a>
-      <a class="hub-card" href="recrutement.html" style="--i:1">
-        <span class="hub-icon">🛡️</span>
-        <h4>Recrutement</h4>
-        <p>Critères, règles et formulaire de candidature.</p>
-        <span class="hub-link">Postuler →</span>
-      </a>
-      <a class="hub-card" href="commerce.html" style="--i:2">
-        <span class="hub-icon">🛒</span>
-        <h4>Commerce</h4>
-        <p>PokeShop, ItemShop et ServiceShop de la guilde.</p>
-        <span class="hub-link">Visiter →</span>
-      </a>
-      <a class="hub-card" href="contact.html" style="--i:3">
-        <span class="hub-icon">📞</span>
-        <h4>Contact</h4>
-        <p>Une question ? Écrivez-nous ou rejoignez le Discord.</p>
-        <span class="hub-link">Écrire →</span>
-      </a>
+    <div class="contact-grid">
+      <div class="contact-discord reveal">
+        <div>
+          <h3>Rejoignez le Discord</h3>
+          <p>Toute la vie de la guilde s'y passe : recrutement, échanges, événements et support.</p>
+          <a href="#" class="btn btn-discord">💬 Rejoindre le Discord</a>
+        </div>
+        <div class="responsables" id="teamList"></div>
+      </div>
+      <div class="form-card reveal">
+        <h3>Formulaire de contact</h3>
+        <p class="form-sub">Pour toute question hors recrutement.</p>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="field"><label>Nom</label><input type="text" name="nom" required></div>
+            <div class="field"><label>Email ou Discord</label><input type="text" name="contact" required></div>
+          </div>
+          <div class="field full" style="margin-bottom:16px;">
+            <label>Message</label>
+            <textarea name="message" required placeholder="Votre message…"></textarea>
+          </div>
+          <button type="submit" class="btn submit-btn" style="background:var(--deep-blue);">Envoyer <span class="arrow">→</span></button>
+        </form>
+        <div class="socials" style="margin-top:24px;">
+          <a class="social-btn" href="#" title="Discord" style="background:rgba(63,127,166,0.15);">💬</a>
+          <a class="social-btn" href="#" title="TikTok" style="background:rgba(63,127,166,0.15);">🎵</a>
+          <a class="social-btn" href="#" title="YouTube" style="background:rgba(63,127,166,0.15);">▶️</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -134,6 +111,6 @@
   </div>
 </footer>
 <script src="js/main.js" defer></script>
-<script src="js/home.js" defer></script>
+<script src="js/contact.js" defer></script>
 </body>
 </html>
