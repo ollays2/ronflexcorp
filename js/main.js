@@ -66,7 +66,6 @@ document.querySelectorAll('.nav-links a').forEach(a=>{
   a.addEventListener('click', ()=>{
     const links = document.querySelector('.nav-links');
     if(links) links.classList.remove('mobile-open');
-    document.querySelectorAll('.nav-dropdown.open').forEach(d=>d.classList.remove('open'));
     document.body.style.overflow = '';
   });
 });
@@ -76,21 +75,6 @@ document.addEventListener('click', (e)=>{
     links.classList.remove('mobile-open');
     document.body.style.overflow = '';
   }
-});
-
-/* ---------------- Nav dropdown ("Commerce") ---------------- */
-document.querySelectorAll('.nav-dropdown').forEach(dropdown=>{
-  const toggle = dropdown.querySelector('.nav-drop-toggle');
-  toggle.addEventListener('click', (e)=>{
-    e.preventDefault();
-    e.stopPropagation();
-    dropdown.classList.toggle('open');
-  });
-});
-document.addEventListener('click', (e)=>{
-  document.querySelectorAll('.nav-dropdown.open').forEach(d=>{
-    if(!d.contains(e.target)) d.classList.remove('open');
-  });
 });
 
 /* ---------------- Scroll reveal ---------------- */
