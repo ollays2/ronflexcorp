@@ -1,10 +1,9 @@
 /* ---------------- Statistiques animées (Accueil) ---------------- */
 const FALLBACK_STATS = [
-  { label:"Membres", value:6 },
-  { label:"Pokémon dispo.", value:0 },
-  { label:"Pokémon vendus", value:0 },
-  { label:"Transactions", value:0 },
-  { label:"Niveau moyen", value:0 }
+  { label:"Membres Discord", value:10 },
+  { label:"Pokémon disponibles", value:0 },
+  { label:"Régions explorables", value:0 },
+  { label:"Arènes & Gymnases", value:0 }
 ];
 
 const statIO = new IntersectionObserver((entries)=>{

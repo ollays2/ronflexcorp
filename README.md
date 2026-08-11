@@ -1,32 +1,29 @@
-# RonflexCorp — Site de guilde Cobblemon
+# RonflexCorp — Site du serveur Minecraft Cobblemon
 
-Site web premium et responsive pour la guilde **RonflexCorp**.
+Site web premium et responsive pour le serveur **RonflexCorp**, un serveur Minecraft Cobblemon.
 
 ## Structure du projet
 
-Le site est découpé en plusieurs pages (et non plus une seule one-page à ancres) :
+Le site est découpé en 4 pages dédiées :
 
 ```
 ronflexcorp/
-├── index.html                    → Accueil (Hero + accès rapide aux autres pages)
-├── presentation.html             → Présentation (histoire, valeurs, rangs, galerie)
-├── recrutement.html              → Recrutement (critères, règles, formulaire de candidature)
-├── contact.html                  → Contact (équipe, Discord, formulaire de contact)
+├── index.html                    → Accueil (présentation du serveur, accès rapide aux autres pages)
+├── launcher.html                 → Launcher (téléchargement du modpack, connexion au serveur, FAQ)
+├── wiki.html                     → Wiki (régions, gymnases, élevage, économie, PvP, events, commandes)
+├── boutique.html                 → Boutique (grades cosmétiques)
 ├── css/
 │   └── style.css                 → tous les styles (palette, typographie, animations, responsive)
 ├── js/
 │   ├── main.js                   → commun à toutes les pages : nav, burger, scroll reveal,
-│   │                                particules du Hero
+│   │                                particules du Hero, copie de l'IP du serveur
 │   ├── home.js                   → statistiques animées de l'Accueil
-│   ├── presentation.js           → rangs de la guilde (Présentation)
-│   ├── recrutement.js            → formulaire de candidature
-│   └── contact.js                → équipe + formulaire de contact
+│   └── boutique.js               → grades affichés dans la Boutique
+├── data/
+│   ├── stats.json                → statistiques affichées sur l'Accueil
+│   └── boutique.json             → grades et avantages de la Boutique
 ├── assets/
-│   ├── logo.svg / logo-footer.svg   → logo RonflexCorp (nav, footer)
-│   ├── mascot-hero.svg              → mascotte affichée dans le Hero
-│   ├── mascot-loader.svg            → mascotte affichée pendant le chargement
-│   ├── mountains.svg                → décor du Hero
-│   └── gallery-1.svg … gallery-4.svg → illustrations de la galerie (section Présentation)
+│   └── Snorlax_600_3331126.jpg, snorlax-cafe.jpg, snorlax-foret.jpg → mascotte RonflexCorp
 └── README.md
 ```
 
@@ -46,16 +43,17 @@ puis ouvrez `http://localhost:8000` dans votre navigateur.
 
 ## Images / droits d'auteur
 
-Toutes les illustrations du dossier `assets/` sont des créations originales (SVG dessinés pour
-ce projet), inspirées par les couleurs et la silhouette de Ronflex, mais ne reproduisent aucun
-artwork officiel Nintendo / Game Freak / The Pokémon Company. Si vous souhaitez utiliser de vrais
-artworks ou sprites officiels, vous devrez les héberger vous-même et vérifier que leur usage
-respecte les droits du titulaire de la licence — ce n'est pas un contenu que je peux générer
-ou intégrer directement.
+Toutes les illustrations du dossier `assets/` sont des créations originales inspirées par les
+couleurs et la silhouette de Ronflex, mais ne reproduisent aucun artwork officiel Nintendo /
+Game Freak / The Pokémon Company / Cobblemon. Si vous souhaitez utiliser de vrais artworks ou
+sprites officiels, vous devrez les héberger vous-même et vérifier que leur usage respecte les
+droits du titulaire de la licence.
 
 ## Personnalisation rapide
 
 - **Couleurs** : variables CSS en haut de `css/style.css` (`:root { --deep-blue: ... }`)
 - **Typographies** : Fraunces (titres), Work Sans (texte courant), JetBrains Mono (données/labels)
 - **Textes** : directement dans le fichier `.html` de la page concernée
-- **Statistiques animées du Hero** : attribut `data-count` sur chaque `<b>` dans la section stats
+- **Adresse du serveur** : attribut `data-copy` sur les boutons `.copy-btn` (Accueil et Launcher)
+- **Statistiques animées du Hero** : `data/stats.json`
+- **Grades de la Boutique** : `data/boutique.json`

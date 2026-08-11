@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Launcher — RonflexCorp</title>
+<meta name="description" content="Téléchargez le modpack Cobblemon et connectez-vous au serveur RonflexCorp en quelques minutes.">
+<link rel="icon" type="image/jpeg" href="assets/Snorlax_600_3331126.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <img class="loader-mascot" src="assets/Snorlax_600_3331126.jpg" alt="Mascotte RonflexCorp endormie" width="110" height="88" style="border-radius:24px;object-fit:cover;">
+  <span>Chargement du serveur…</span>
+</div>
+
+<!-- Nav -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="assets/Snorlax_600_3331126.jpg" alt="Logo RonflexCorp" width="46" height="46" style="border-radius:50%;object-fit:cover;">
+      <span class="brand-text"><b>RonflexCorp</b><span>Serveur Minecraft Cobblemon</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">🏠 Accueil</a>
+      <a href="launcher.html" class="active">📦 Launcher</a>
+      <a href="wiki.html">📖 Wiki</a>
+      <a href="boutique.html">🛒 Boutique</a>
+    </div>
+    <div class="nav-cta">
+      <a href="https://discord.gg/UPFU88eyMu" target="_blank" rel="noopener" class="btn btn-discord btn-sm">💬 Discord</a>
+      <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<!-- LAUNCHER -->
+<section class="section section-cream" id="launcher" style="padding-top:150px;">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:20px;">
+      <span class="eyebrow">Nous rejoindre</span>
+      <h2 class="section-title">Téléchargez le modpack et connectez-vous</h2>
+      <p class="section-lead">Quelques minutes suffisent pour installer le modpack Cobblemon et rejoindre RonflexCorp.</p>
+    </div>
+
+    <div class="prereq-grid reveal reveal-stagger">
+      <div class="prereq-card" style="--i:0">
+        <span>☕</span>
+        <b>Java 21</b>
+        <p>Requis pour Minecraft 1.21.x</p>
+      </div>
+      <div class="prereq-card" style="--i:1">
+        <span>🧵</span>
+        <b>NeoForge</b>
+        <p>Chargeur de mods utilisé par le modpack</p>
+      </div>
+      <div class="prereq-card" style="--i:2">
+        <span>💾</span>
+        <b>6 Go de RAM</b>
+        <p>Minimum recommandé pour Cobblemon</p>
+      </div>
+      <div class="prereq-card" style="--i:3">
+        <span>🌐</span>
+        <b>Compte Minecraft Java</b>
+        <p>Edition Java, pas Bedrock</p>
+      </div>
+    </div>
+
+    <div class="step-list reveal reveal-stagger">
+      <div class="step" style="--i:0">
+        <div class="step-num">1</div>
+        <div>
+          <h4>Installez un launcher compatible</h4>
+          <p>Téléchargez et installez <a href="https://www.curseforge.com/minecraft" target="_blank" rel="noopener">CurseForge</a> ou <a href="https://modrinth.com/app" target="_blank" rel="noopener">le launcher Modrinth</a> — les deux permettent d'installer des modpacks en un clic.</p>
+        </div>
+      </div>
+      <div class="step" style="--i:1">
+        <div class="step-num">2</div>
+        <div>
+          <h4>Recherchez et installez le modpack « RonflexCorp »</h4>
+          <p>Dans la recherche du launcher, tapez <b>RonflexCorp</b> puis cliquez sur <b>Installer</b>. Le launcher télécharge automatiquement Minecraft, NeoForge et tous les mods nécessaires (Cobblemon inclus).</p>
+        </div>
+      </div>
+      <div class="step" style="--i:2">
+        <div class="step-num">3</div>
+        <div>
+          <h4>Lancez le jeu une première fois</h4>
+          <p>Cliquez sur <b>Jouer</b> depuis le launcher. Le premier lancement peut prendre quelques minutes le temps que Minecraft se configure.</p>
+        </div>
+      </div>
+      <div class="step" style="--i:3">
+        <div class="step-num">4</div>
+        <div>
+          <h4>Ajoutez le serveur et connectez-vous</h4>
+          <p>Dans le menu <b>Multijoueur</b>, cliquez sur <b>Ajouter un serveur</b> et renseignez l'adresse ci-dessous.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ip-card reveal" style="margin-top:36px;">
+      <div>
+        <h3>Adresse du serveur</h3>
+        <p>Copiez l'IP et collez-la dans votre client Minecraft.</p>
+      </div>
+      <div class="ip-value">
+        <code>play.ronflexcorp.fr</code>
+        <button class="copy-btn btn btn-outline" data-copy="play.ronflexcorp.fr" style="padding:12px 22px;">Copier l'IP</button>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top:70px;margin-bottom:10px;">
+      <span class="eyebrow">Besoin d'aide</span>
+      <h3 style="font-size:26px;">Questions fréquentes</h3>
+    </div>
+    <div class="faq-list reveal reveal-stagger">
+      <details class="faq-item" style="--i:0">
+        <summary>Le modpack n'apparaît pas dans la recherche</summary>
+        <p>Vérifiez que votre launcher est à jour. Si le modpack reste introuvable, utilisez le lien direct partagé sur notre Discord dans le salon #launcher.</p>
+      </details>
+      <details class="faq-item" style="--i:1">
+        <summary>Le jeu crash au lancement</summary>
+        <p>Assurez-vous d'avoir alloué au moins 6 Go de RAM au jeu dans les paramètres du launcher, et que vous utilisez bien Java 21.</p>
+      </details>
+      <details class="faq-item" style="--i:2">
+        <summary>Puis-je jouer sur Minecraft Bedrock (mobile / console) ?</summary>
+        <p>Non, Cobblemon est un mod Forge/NeoForge disponible uniquement sur l'édition Java de Minecraft.</p>
+      </details>
+      <details class="faq-item" style="--i:3">
+        <summary>J'ai un autre problème de connexion</summary>
+        <p>Passez par le salon #support de notre Discord, un membre de l'équipe vous répondra rapidement.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/Snorlax_600_3331126.jpg" alt="Logo RonflexCorp" width="38" height="38" style="border-radius:50%;object-fit:cover;">
+        <b>RonflexCorp</b>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="launcher.html">Launcher</a>
+        <a href="wiki.html">Wiki</a>
+        <a href="boutique.html">Boutique</a>
+      </div>
+      <a href="https://discord.gg/UPFU88eyMu" target="_blank" rel="noopener" class="btn btn-discord btn-sm">💬 Discord</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 RonflexCorp — Serveur Minecraft Cobblemon.</span>
+      <span>Fan-site non officiel. Cobblemon n'est pas affilié à Nintendo, Game Freak, The Pokémon Company ni Mojang/Microsoft.</span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique — RonflexCorp</title>
+<meta name="description" content="Grades, kits et cosmétiques pour soutenir le serveur Cobblemon RonflexCorp.">
+<link rel="icon" type="image/jpeg" href="assets/Snorlax_600_3331126.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <img class="loader-mascot" src="assets/Snorlax_600_3331126.jpg" alt="Mascotte RonflexCorp endormie" width="110" height="88" style="border-radius:24px;object-fit:cover;">
+  <span>Chargement du serveur…</span>
+</div>
+
+<!-- Nav -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="assets/Snorlax_600_3331126.jpg" alt="Logo RonflexCorp" width="46" height="46" style="border-radius:50%;object-fit:cover;">
+      <span class="brand-text"><b>RonflexCorp</b><span>Serveur Minecraft Cobblemon</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">🏠 Accueil</a>
+      <a href="launcher.html">📦 Launcher</a>
+      <a href="wiki.html">📖 Wiki</a>
+      <a href="boutique.html" class="active">🛒 Boutique</a>
+    </div>
+    <div class="nav-cta">
+      <a href="https://discord.gg/UPFU88eyMu" target="_blank" rel="noopener" class="btn btn-discord btn-sm">💬 Discord</a>
+      <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<!-- BOUTIQUE -->
+<section class="section section-cream" id="boutique" style="padding-top:150px;">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:40px;">
+      <span class="eyebrow">Soutenir le serveur</span>
+      <h2 class="section-title">Boutique RonflexCorp</h2>
+      <p class="section-lead">Des grades cosmétiques et pratiques pour soutenir les frais du serveur, sans jamais déséquilibrer le jeu.</p>
+    </div>
+    <div class="tier-grid reveal reveal-stagger" id="tierGrid"></div>
+    <div class="shop-note reveal">
+      <b>Aucun avantage compétitif payant.</b> Les grades offrent des emplacements de claim, des cosmétiques et un accès prioritaire — jamais de Pokémon, d'objets rares ou de puissance en combat. Les achats se font via notre boutique en ligne liée au Discord.
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/Snorlax_600_3331126.jpg" alt="Logo RonflexCorp" width="38" height="38" style="border-radius:50%;object-fit:cover;">
+        <b>RonflexCorp</b>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="launcher.html">Launcher</a>
+        <a href="wiki.html">Wiki</a>
+        <a href="boutique.html">Boutique</a>
+      </div>
+      <a href="https://discord.gg/UPFU88eyMu" target="_blank" rel="noopener" class="btn btn-discord btn-sm">💬 Discord</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 RonflexCorp — Serveur Minecraft Cobblemon.</span>
+      <span>Fan-site non officiel. Cobblemon n'est pas affilié à Nintendo, Game Freak, The Pokémon Company ni Mojang/Microsoft.</span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+<script src="js/boutique.js" defer></script>
+</body>
+</html>
