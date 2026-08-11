@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RonflexCorp — Dormir, combattre, commercer.</title>
+<title>RonflexCorp — Serveur Minecraft Cobblemon</title>
+<meta name="description" content="RonflexCorp, le serveur Minecraft Cobblemon où capturer, combattre et explorer prennent tout leur sens. Rejoignez notre communauté.">
 <link rel="icon" type="image/jpeg" href="assets/Snorlax_600_3331126.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +16,7 @@
 <!-- Loader -->
 <div class="loader" id="loader">
   <img class="loader-mascot" src="assets/Snorlax_600_3331126.jpg" alt="Mascotte RonflexCorp endormie" width="110" height="88" style="border-radius:24px;object-fit:cover;">
-  <span>Ronflex se réveille…</span>
+  <span>Chargement du serveur…</span>
 </div>
 
 <!-- Nav -->
@@ -23,16 +24,16 @@
   <div class="container nav-inner">
     <a href="index.html" class="brand">
       <img class="brand-mark" src="assets/Snorlax_600_3331126.jpg" alt="Logo RonflexCorp" width="46" height="46" style="border-radius:50%;object-fit:cover;">
-      <span class="brand-text"><b>RonflexCorp</b><span>Dormir · Combattre · Commercer</span></span>
+      <span class="brand-text"><b>RonflexCorp</b><span>Serveur Minecraft Cobblemon</span></span>
     </a>
     <div class="nav-links">
       <a href="index.html" class="active">🏠 Accueil</a>
-      <a href="presentation.html">📖 Présentation</a>
-      <a href="recrutement.html">🛡️ Recrutement</a>
-      <a href="contact.html">📞 Contact</a>
+      <a href="launcher.html">📦 Launcher</a>
+      <a href="wiki.html">📖 Wiki</a>
+      <a href="boutique.html">🛒 Boutique</a>
     </div>
     <div class="nav-cta">
-      <a href="https://discord.gg/UPFU88eyMu" target="_blank" rel="noopener" class="btn btn-discord" style="padding:11px 22px;font-size:13.5px;">💬 Discord</a>
+      <a href="https://discord.gg/UPFU88eyMu" target="_blank" rel="noopener" class="btn btn-discord btn-sm">💬 Discord</a>
       <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
     </div>
   </div>
@@ -42,14 +43,18 @@
 <header class="hero" id="accueil">
   <div class="hero-sky-glow"></div>
   <div class="hero-particles" id="particles"></div>
-  <img class="hero-mountains" src="assets/mountains.svg" alt="" aria-hidden="true">
   <div class="container hero-inner">
     <div class="hero-copy reveal">
-      <span class="eyebrow">Guilde Cobblemon</span>
-      <h1>Bienvenue chez <em>RonflexCorp</em></h1>
-      <p>La guilde où chaque dresseur trouve sa place. Un territoire paisible, une communauté soudée, et la meilleure pension de la région.</p>
+      <span class="eyebrow">Serveur Cobblemon</span>
+      <h1>Bienvenue sur <em>RonflexCorp</em></h1>
+      <p>Un serveur Minecraft Cobblemon où capturer, combattre et explorer prennent tout leur sens. Une carte pensée pour l'aventure, une communauté active et une économie équitable.</p>
       <div class="hero-actions">
-        <a href="recrutement.html" class="btn btn-primary">Rejoindre la guilde →</a>
+        <a href="launcher.html" class="btn btn-primary">Télécharger le launcher →</a>
+        <a href="https://discord.gg/UPFU88eyMu" target="_blank" rel="noopener" class="btn btn-outline">💬 Rejoindre le Discord</a>
+      </div>
+      <div class="server-ip">
+        <span>IP : play.ronflexcorp.fr</span>
+        <button class="copy-btn" data-copy="play.ronflexcorp.fr">Copier</button>
       </div>
     </div>
     <div class="hero-visual reveal">
@@ -68,28 +73,44 @@
   <div class="container">
     <div class="reveal" style="margin-bottom:40px;">
       <span class="eyebrow">Explorer le site</span>
-      <h2 class="section-title">Toute la guilde, en un coup d'œil</h2>
-      <p class="section-lead">Découvrez qui nous sommes, rejoignez l'aventure ou faites un tour au comptoir.</p>
+      <h2 class="section-title">Tout RonflexCorp, en un coup d'œil</h2>
+      <p class="section-lead">Téléchargez le modpack, consultez le wiki des fonctionnalités ou faites un tour à la boutique.</p>
     </div>
     <div class="hub-grid reveal reveal-stagger">
-      <a class="hub-card" href="presentation.html" style="--i:0">
+      <a class="hub-card" href="launcher.html" style="--i:0">
+        <span class="hub-icon">📦</span>
+        <h4>Launcher</h4>
+        <p>Téléchargez le modpack et connectez-vous en quelques minutes.</p>
+        <span class="hub-link">Télécharger →</span>
+      </a>
+      <a class="hub-card" href="wiki.html" style="--i:1">
         <span class="hub-icon">📖</span>
-        <h4>Présentation</h4>
-        <p>Notre histoire, nos valeurs et les rangs de la guilde.</p>
+        <h4>Wiki</h4>
+        <p>Régions, gymnases, élevage, économie : toutes les fonctionnalités du serveur.</p>
         <span class="hub-link">Découvrir →</span>
       </a>
-      <a class="hub-card" href="recrutement.html" style="--i:1">
-        <span class="hub-icon">🛡️</span>
-        <h4>Recrutement</h4>
-        <p>Critères, règles et formulaire de candidature.</p>
-        <span class="hub-link">Postuler →</span>
+      <a class="hub-card" href="boutique.html" style="--i:2">
+        <span class="hub-icon">🛒</span>
+        <h4>Boutique</h4>
+        <p>Grades, kits et cosmétiques pour soutenir le serveur.</p>
+        <span class="hub-link">Voir la boutique →</span>
       </a>
-      <a class="hub-card" href="contact.html" style="--i:2">
-        <span class="hub-icon">📞</span>
-        <h4>Contact</h4>
-        <p>Une question ? Écrivez-nous ou rejoignez le Discord.</p>
-        <span class="hub-link">Écrire →</span>
-      </a>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI NOUS REJOINDRE -->
+<section class="section section-blue" id="pourquoi">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:20px;">
+      <span class="eyebrow">Pourquoi RonflexCorp</span>
+      <h2 class="section-title">Un serveur Cobblemon pensé pour durer</h2>
+      <p class="section-lead">Comme le Pokémon qui nous inspire, nous avançons lentement mais nous ne reculons jamais.</p>
+    </div>
+    <div class="value-list reveal reveal-stagger">
+      <div class="value-item" style="--i:0"><div class="value-icon">01</div><div><b>Univers Cobblemon complet</b><p>Capture, combats, élevage et échanges dans un monde Minecraft entièrement dédié à Cobblemon.</p></div></div>
+      <div class="value-item" style="--i:1"><div class="value-icon">02</div><div><b>Communauté active</b><p>Une équipe présente, des événements réguliers et un Discord vivant.</p></div></div>
+      <div class="value-item" style="--i:2"><div class="value-icon">03</div><div><b>Économie équitable</b><p>Une boutique équilibrée, sans avantage compétitif payant.</p></div></div>
     </div>
   </div>
 </section>
@@ -104,15 +125,15 @@
       </div>
       <div class="footer-links">
         <a href="index.html">Accueil</a>
-        <a href="presentation.html">Présentation</a>
-        <a href="recrutement.html">Recrutement</a>
-        <a href="contact.html">Contact</a>
+        <a href="launcher.html">Launcher</a>
+        <a href="wiki.html">Wiki</a>
+        <a href="boutique.html">Boutique</a>
       </div>
-      <a href="https://discord.gg/UPFU88eyMu" target="_blank" rel="noopener" class="btn btn-discord" style="padding:10px 20px;font-size:13px;">💬 Discord</a>
+      <a href="https://discord.gg/UPFU88eyMu" target="_blank" rel="noopener" class="btn btn-discord btn-sm">💬 Discord</a>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 RonflexCorp — Guilde Cobblemon. Fan-site non officiel, non affilié à Nintendo, Game Freak ou The Pokémon Company.</span>
-      <span>Mentions légales · Confidentialité</span>
+      <span>© 2026 RonflexCorp — Serveur Minecraft Cobblemon.</span>
+      <span>Fan-site non officiel. Cobblemon n'est pas affilié à Nintendo, Game Freak, The Pokémon Company ni Mojang/Microsoft.</span>
     </div>
   </div>
 </footer>

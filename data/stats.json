@@ -1,5 +1,6 @@
 [
-  { "label": "Membres", "value": 10 },
-  { "label": "Pokémon dispo.", "value": 0 },
-  { "label": "Pokémon vendus", "value": 0 }
+  { "label": "Membres Discord", "value": 10 },
+  { "label": "Pokémon disponibles", "value": 500 },
+  { "label": "Régions explorables", "value": 3 },
+  { "label": "Arènes & Gymnases", "value": 8 }
 ]

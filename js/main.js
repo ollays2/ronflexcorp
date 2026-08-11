@@ -1,29 +1,3 @@
-/* ---------------- Configuration Discord ---------------- */
-/* Crée un webhook dans Discord : Paramètres du serveur → Intégrations → Webhooks → Nouveau
-   webhook → choisis le salon (ex. #recrutement, #contact) → Copier l'URL du webhook.
-   Colle chaque URL ci-dessous. Tu peux utiliser le même salon/webhook pour les deux
-   si tu préfères tout centraliser au même endroit. */
-const DISCORD_WEBHOOKS = {
-  recruitment: "https://discord.com/api/webhooks/1522621547246780569/5undPAVodPKY8taKA--F1hL1COPHJnkY72quSc90rc8A2b9Jiweirh0wLy8NUJrVME-I",
-  contact: "https://discord.com/api/webhooks/1522630606159085818/pesaptEqdXzNabFPdXNQcy2AJ3BT-oibZu4UZGidgF8imL_v8JjuxXZh-d38rehpagcN"
-};
-
-function isWebhookConfigured(url){
-  return typeof url === 'string' && url.startsWith('https://discord.com/api/webhooks/');
-}
-
-async function sendToDiscord(webhookUrl, embed){
-  if(!isWebhookConfigured(webhookUrl)){
-    throw new Error('webhook-not-configured');
-  }
-  const res = await fetch(webhookUrl, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ embeds: [embed] })
-  });
-  if(!res.ok) throw new Error('discord-error-' + res.status);
-}
-
 /* ---------------- Helper : charge un JSON avec valeur de secours ---------------- */
 /* Si le fichier est absent ou mal formé, une valeur de secours prend le relais
    pour qu'aucune page ne casse. */
@@ -91,7 +65,7 @@ document.querySelectorAll('.reveal-stagger').forEach(parent=>{
   [...parent.children].forEach((c,i)=> c.style.setProperty('--i', i));
 });
 
-/* ---------------- Hero particles (feuilles / poussières) ---------------- */
+/* ---------------- Hero particles (poussières de sommeil) ---------------- */
 const particleWrap = document.getElementById('particles');
 if(particleWrap){
   const glyphs = ['✦','·','❉','z'];
@@ -107,3 +81,18 @@ if(particleWrap){
     particleWrap.appendChild(p);
   }
 }
+
+/* ---------------- Copier l'adresse du serveur ---------------- */
+document.querySelectorAll('.copy-btn[data-copy]').forEach(btn=>{
+  btn.addEventListener('click', async ()=>{
+    const value = btn.dataset.copy;
+    const original = btn.textContent;
+    try{
+      await navigator.clipboard.writeText(value);
+      btn.textContent = 'Copié ✓';
+    }catch(err){
+      btn.textContent = 'Erreur';
+    }
+    setTimeout(()=> btn.textContent = original, 1800);
+  });
+});
