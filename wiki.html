@@ -163,21 +163,84 @@
     <div class="wiki-section-head reveal">
       <span class="eyebrow">⌨️ Commandes utiles</span>
       <h3 style="font-size:26px;">Les commandes à connaître</h3>
+      <p class="section-lead" style="margin-top:10px;">Un tour d'horizon des commandes et mécaniques du serveur, mod par mod.</p>
     </div>
+
+    <h4 class="cmd-subhead reveal">💰 Économie — CobbleDollars</h4>
+    <div class="shop-note reveal">Le shop et la banque ne s'ouvrent pas via une commande : interagissez avec un PNJ marchand (<b>Cobble Merchant</b>) rencontré dans le monde.</div>
     <table class="cmd-table reveal">
       <thead>
         <tr><th>Commande</th><th>Description</th></tr>
       </thead>
       <tbody>
-        <tr><td>/pokedex</td><td>Ouvre votre Pokédex personnel</td></tr>
-        <tr><td>/pcbox</td><td>Accède à votre PC pour gérer vos Pokémon</td></tr>
-        <tr><td>/duel &lt;joueur&gt;</td><td>Défie un autre joueur en combat</td></tr>
-        <tr><td>/claim</td><td>Protège la zone autour de vous</td></tr>
-        <tr><td>/spawn</td><td>Retourne au point de spawn</td></tr>
-        <tr><td>/warp marché</td><td>Se téléporte au marché central</td></tr>
-        <tr><td>/ticket</td><td>Ouvre un ticket de support</td></tr>
+        <tr><td>/cobbledollars pay &lt;joueur&gt; &lt;montant&gt;</td><td>Envoie des CobbleDollars à un autre joueur. Exemple : <code>/cobbledollars pay Sacha 500</code> envoie 500 CobbleDollars à Sacha.</td></tr>
+        <tr><td>/cobbledollars balance<span class="tbd">à confirmer</span></td><td>Affiche votre solde de CobbleDollars.</td></tr>
       </tbody>
     </table>
+
+    <h4 class="cmd-subhead reveal">🎖️ Progression de grade (rankup)</h4>
+    <div class="shop-note reveal">Il n'existe pas de commande <code>/rankup</code> : la progression est automatique. Achetez un « Passeport de [rang suivant] » chez le marchand — dès que vous l'avez en inventaire ou en hotbar, si vous êtes au bon palier, vous êtes promu et le passeport est consommé. Impossible de sauter une étape : au mauvais palier, il est effacé et remboursé.</div>
+    <div style="overflow-x:auto;">
+    <table class="rank-table reveal">
+      <thead>
+        <tr><th>#</th><th>Rang</th><th>Coût du passeport</th><th>Récompenses à la promotion</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>0</td><td>Joueur</td><td>—</td><td>Rang de départ</td></tr>
+        <tr><td>1</td><td>Dresseur</td><td>100 000 CD</td><td>1000 CD, 5 Poké Ball, 3 Potions</td></tr>
+        <tr><td>2</td><td>Dresseur Confirmé</td><td>180 000 CD</td><td>2000 CD, 5 Great Ball, 5 Super Potions</td></tr>
+        <tr><td>3</td><td>Dresseur Aguerri</td><td>360 000 CD</td><td>4000 CD, 3 Ultra Ball, 1 Rare Candy, panoplie d'outils en fer</td></tr>
+        <tr><td>4</td><td>Dresseur Expert</td><td>720 000 CD</td><td>6000 CD, 5 Ultra Ball, 1 Exp. Candy L, armure en fer complète</td></tr>
+        <tr><td>5</td><td>Capitaine d'Arène</td><td>1 600 000 CD</td><td>10 000 CD, 4 pierres d'évolution (Feu/Eau/Foudre/Feuille), panoplie d'outils en diamant</td></tr>
+        <tr><td>6</td><td>Conseil des 4</td><td>3 500 000 CD</td><td>15 000 CD, 3 Rare Candy, 1 Choice Band, armure diamant complète</td></tr>
+        <tr><td>7</td><td>Champion de Ligue</td><td>8 000 000 CD</td><td>25 000 CD, 1 Master Ball exclusive, armure netherite complète</td></tr>
+        <tr><td>8</td><td>Maître Pokémon</td><td>19 000 000 CD</td><td>40 000 CD, 5 Rare Candy, panoplie d'outils en netherite</td></tr>
+        <tr><td>9</td><td>Légende RonflexCorp</td><td>47 000 000 CD</td><td>75 000 CD, 3 blocs de diamant, 1 Nether Star</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="shop-note reveal">La limite de chunks claimables augmente aussi à chaque rang, de 15 pour <b>Joueur</b> jusqu'à 300 pour <b>Légende RonflexCorp</b> — une bonne raison de progresser.<span class="tbd">paliers intermédiaires à confirmer</span></div>
+
+    <h4 class="cmd-subhead reveal">📖 Quêtes — FTB Quests</h4>
+    <div class="shop-note reveal">Les quêtes se gèrent entièrement via le <b>livre de quêtes</b> (interface graphique) : pas de commande à taper. Touche par défaut pour l'ouvrir : <b>O</b><span class="tbd">à confirmer</span>.</div>
+
+    <h4 class="cmd-subhead reveal">🗺️ Claims — FTB Chunks</h4>
+    <div class="shop-note reveal">Le territoire se claim via la <b>carte</b> (interface graphique), touche par défaut<span class="tbd">à confirmer</span> (souvent <b>M</b>) : clic gauche + glisser pour claim, clic droit + glisser pour unclaim, Shift + clic gauche/droit + glisser pour force-load / un-force-load. La limite de chunks claimables et force-loadés dépend de votre rang (voir tableau de progression ci-dessus).</div>
+
+    <h4 class="cmd-subhead reveal">🎮 Raccourcis — Cobblemon</h4>
+    <div class="shop-note reveal">La capture et le combat sauvage ne sont pas des commandes : lancez une Poké Ball ou approchez un Pokémon sauvage. L'échange entre joueurs se fait par interaction directe avec un autre joueur.<span class="tbd">syntaxe à confirmer</span></div>
+    <table class="cmd-table reveal">
+      <thead>
+        <tr><th>Raccourci</th><th>Action</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Touche<span class="tbd">à confirmer</span></td><td>Ouvrir le Pokédex</td></tr>
+        <tr><td>Touche<span class="tbd">à confirmer</span></td><td>Ouvrir le PokéNav</td></tr>
+        <tr><td>Touche<span class="tbd">à confirmer</span></td><td>Ouvrir le Résumé (Summary) de l'équipe</td></tr>
+        <tr><td>Touche<span class="tbd">à confirmer</span></td><td>Lancer le Pokémon sélectionné</td></tr>
+        <tr><td>Touche<span class="tbd">à confirmer</span></td><td>Masquer l'overlay de l'équipe</td></tr>
+      </tbody>
+    </table>
+
+    <h4 class="cmd-subhead reveal">🧭 Téléportation & confort — FTB Essentials</h4>
+    <table class="cmd-table reveal">
+      <thead>
+        <tr><th>Commande</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>/home, /home set &lt;nom&gt;, /home &lt;nom&gt;, /home delete &lt;nom&gt;</td><td>Gère vos points de téléportation personnels.<span class="tbd">syntaxe à confirmer</span></td></tr>
+        <tr><td>/warp &lt;nom&gt;, /warp list</td><td>Téléportation vers un point public défini par le staff</td></tr>
+        <tr><td>/tpa &lt;joueur&gt;, /tpaccept, /tpdeny, /tpacancel</td><td>Demandes de téléportation entre joueurs</td></tr>
+        <tr><td>/back</td><td>Retour à la position précédant votre dernière téléportation</td></tr>
+        <tr><td>/rtp</td><td>Téléportation aléatoire (peut être désactivée sur certaines dimensions)</td></tr>
+        <tr><td>/spawn</td><td>Retour au spawn du serveur</td></tr>
+        <tr><td>/kit &lt;nom&gt;</td><td>Récupère un kit</td></tr>
+        <tr><td>/nick &lt;pseudo&gt;</td><td>Change votre pseudo affiché</td></tr>
+        <tr><td>/near</td><td>Liste les joueurs à proximité</td></tr>
+      </tbody>
+    </table>
+
+    <div class="shop-note reveal">🎁 <b>Kits additionnels</b>, 🔄 <b>GTS</b> (hôtel des ventes entre joueurs pour les Pokémon) et 🧭 <b>Cobblenav</b> (waypoints) sont bien présents sur le serveur, mais leurs commandes exactes restent à confirmer en jeu avant publication.<span class="tbd">à confirmer</span></div>
   </div>
 </section>
 
